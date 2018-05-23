@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% include meta.html %}
+    <link rel="shortcut icon" href="{{ site.staticurl }}/icon/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/css/second-style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/css/component.css" />
+    <script src="{{ site.staticurl }}/js/modernizr.custom.js"></script>
+
+    <link href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+
+  <body>
+    
+
+    <div id="st-container" class="st-container">
+      <!--  
+        example menus 
+        these menus will be on top of the push wrapper
+      -->
+      
+      <nav class="st-menu st-effect" id="menu">
+        <h2><i class="fa fa-linux"></i>      Wever</h2>
+        <ul>
+          <li><a  href="{{ site.url }}"><i class="fa fa-home"></i>主页</a></li>
+          <li><a href="{{ site.url }}"><i class="fa fa-tag"></i>文字分类</a></li>
+          <li><a href="{{ site.url }}"><i class="fa fa-book"></i>书单</a></li>
+          <li><a href="{{ site.url }}"><i class="fa fa-file"></i>Projects</a></li>
+          <li><a href="/about"><i class="fa fa-user"></i>关于我</a></li>
+        </ul>
+      </nav>
+            <div class="st-pusher">       
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->             
+            <div id="st-trigger-effects">
+              <button data-effect="st-effect"><i class="fa fa-list"></i></button>
+            </div>
+            <div id="backTop">
+              <button><i class="fa fa-chevron-up"></i></button>
+            </div>
+            <!-- Top Navigation -->
+            <!--div class="codrops-top clearfix">
+              <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/3DShadingWithBoxShadows/"><span>Previous Demo</span></a>
+              <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16292"><span>Back to the Codrops Article</span></a></span>
+            </div-->
+            <header class="codrops-header">
+              <h1>{{ site.name }}<span>{{ site.description }}</span></h1>
+            </header>
+
+
+            <div class="main clearfix"> 
+              {{ content }}
+            </div>
+
+              <div class="info">
+                  <footer class="footer">
+                    {% include info.html %}
+                  </footer>
+              </div>
+            </div><!-- /main -->
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="{{ site.staticurl }}/js/classie.js"></script>
+    <script src="{{ site.staticurl }}/js/sidebarEffects.js"></script>
+    {% include analytics.html %}
+  </body>
+</html>
