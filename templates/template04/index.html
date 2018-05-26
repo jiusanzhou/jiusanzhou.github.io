@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no"/>
+<link href="css/template04.css" rel="stylesheet" type="text/css" media="screen">
+<title>清泉流水</title>
+<script type="text/javascript" id="headscript">
+window.onload=function(){
+	   		var reg =/[^\w\u4e00-\u9fa5]/g;
+		    var reg2 =/[\u4e00-\u9fa5a-zA-Z0-9]/;
+			var h1=document.querySelectorAll("h1")[0];
+			var h1_text = h1.innerHTML.substring(0,h1.innerHTML.length-1);
+			var h1_text_last = h1.innerHTML.substring(h1.innerHTML.length-1,h1.innerHTML.length);
+			var h1_html=h1_text+'<span>'+h1_text_last+'</span>';
+			if(reg.test(h1_text_last)){
+				if(!reg2.test(h1.innerHTML)){
+		    		h1.className='noafterall';
+				}else{
+					h1.className='noafter';
+					h1.innerHTML=h1_html;
+				}
+			}
+}
+</script>
+</head>
+<body>
+<h1>荷塘月色</h1>
+<address>
+    <h6>字里行间</h6>
+    <time data-format="中M月d日">陆月贰拾叁日</time>
+</address>
+<h2>朱自清散文选鉴</h2>
+<h3>荷塘月色</h3>
+<blockquote>原载1927年7月10日《小说月报》第18卷第7期</blockquote>
+<figure>
+    <img src="images/template04/image01.jpg">
+    <figcaption>夜荷</figcaption>
+</figure>
+<p>曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。</p>
+<hr>
+<h3>春</h3>
+<blockquote>原载朱文叔编《初中语文课本》第1册1933年7月版</blockquote>
+<p>盼望着，盼望着，东风来了，春天的脚步近了。</p>
+<p>一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水长起来了，太阳的脸红起来了。</p>
+<p>小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的，草绵软软的。</p>
+<p>桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味，闭了眼，树上仿佛已经满是桃儿、杏儿、梨儿！花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。</p>
+<hr>
+<figure>
+   <img src="images/template04/image02.jpg">
+</figure>
+<h3>人物生平</h3>
+<ol>
+    <li>1898年，生于江苏省东海县，本名自华，后改名自清。</li>
+    <li>1920年，毕业于国立北京大学哲学系。</li>
+    <li>1928年，第一本散文集《背影》出版。</li>
+    <li>1931年，留学英国，进修语言学和英国文学。</li>
+    <li>1938年，到昆明，任国立西南联合大学中国文学系主任。</li>
+    <li>1948年8月12日卒，终年49岁。朱自清被誉为有骨气的爱国文化人，毛泽东称赞他“表现了我们民族的英雄气概”。</li>
+</ol>
+<hr class="seperatorlast">
+</body>
+</html>

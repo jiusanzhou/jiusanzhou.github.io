@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no"/>
+<link href="css/summer.css" rel="stylesheet" type="text/css" media="screen">
+<title>夏桑菊和桔梗</title>
+<script>
+var whenReady = (function() {    //这个函数返回whenReady()函数
+    var funcs = [];             //当获得事件时，要运行的函数
+    var ready = false;          //当触发事件处理程序时,切换为true
+    
+    //当文档就绪时,调用事件处理程序
+    function handler(e) {
+        if(ready) return;       //确保事件处理程序只完整运行一次
+        
+        //如果发生onreadystatechange事件，但其状态不是complete的话,那么文档尚未准备好
+        if(e.type === 'onreadystatechange' && document.readyState !== 'complete') {
+            return;
+        }
+        
+        //运行所有注册函数
+        //注意每次都要计算funcs.length
+        //以防这些函数的调用可能会导致注册更多的函数
+        for(var i=0; i<funcs.length; i++) {
+            funcs[i].call(document);
+        }
+        //事件处理函数完整执行,切换ready状态, 并移除所有函数
+        ready = true;
+        funcs = null;
+    }
+    //为接收到的任何事件注册处理程序
+    if(document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', handler, false);
+        document.addEventListener('readystatechange', handler, false);            //IE9+
+        window.addEventListener('load', handler, false);
+    }else if(document.attachEvent) {
+        document.attachEvent('onreadystatechange', handler);
+        window.attachEvent('onload', handler);
+    }
+    //返回whenReady()函数
+    return function whenReady(fn) {
+        if(ready) { fn.call(document); }
+        else { funcs.push(fn); }
+    }
+
+})();
+whenReady(function(){
+    var hr1 = document.createElement('hr')
+    var hr2 = document.createElement('hr')
+    var headerBackground = document.createElement('div')
+    headerBackground.className="headerBackground"
+    var h1 = document.querySelector('h1')
+    var address = document.querySelector('address')
+    if(address.nextElementSibling) {
+        address.parentNode.insertBefore(hr1,address.nextElementSibling)
+    } else {
+        address.parentNode.appendChild(hr1)
+    }
+    h1.parentNode.insertBefore(headerBackground,h1)
+    var headerImg = document.querySelector('header img')
+    if(headerImg && headerImg.getAttribute('src')) {
+        headerBackground.style.backgroundImage = 'url('+headerImg.getAttribute('src')+')'
+    }
+    var headerWrap = document.createElement('div')
+    headerWrap.className = "headerWrap"
+    headerBackground.appendChild(headerWrap)
+    headerWrap.appendChild(h1)
+    headerWrap.appendChild(address)
+    var header = document.querySelector('header')
+    if(header) {
+        header.parentNode.removeChild(header)
+    }
+    document.body.appendChild(hr2)
+    
+})
+    
+</script>
+</head>
+<body>
+<header>
+	<img src="./images/bg.jpg" alt="">
+</header>
+<h1>夏桑菊和桔梗</h1>
+<address>
+	<img src="./images/headImg.png"/>
+	<h6>李碧华</h6>
+	<time data-format="yyyy/MM/dd">2017/02/25</time>
+</address>
+<blockquote>由于夏、桑、菊三者结合，可治发热感冒、头痛惊风，又能清肝解毒，在年前沙士疫症期间，是民间推介的药效饮品。</blockquote>
+<p>夏、桑、菊，其实是三位一体的茶汤。</p>
+<h3>夏枯草</h3>
+<p>先说夏枯草，这个名字带点凄怆，留意甚久。为什么唤这名？原来此野草冬至生，夏至即枯，不像万般植物，春生夏长秋实冬凋，夏枯草与众不同，逆其道而行，相当任性。但它是中国最早的一味抗结核药物，两千多年前已被载入史册《神农本草经》，它清肝、明目，因专治淋巴和肺结核，有防癌功用。</p>
+<h3>桑叶</h3>
+<p>桑指「经霜桑叶」，因为经过霜雪侵压，才气全、力厚。雪晴后采桑叶阴干，呈青黑色，风吹过，作铁器响，所以有人称之「铁扇子」。当它鲜嫩岁月，只作蚕宝宝主食，但有点江湖阅历迈过生死线，更上层楼，才成为一剂良药。</p>
+<h3>菊花</h3>
+<p>菊花不用说了，在中国已有三千多年的栽培历史，它与青松、翠竹、红梅，尊称「四君子」，也是「明目花」，可鲜吃（慈禧太后爱以白菊花瓣作「菊花火锅」），晒干后清香抒怀更是「延寿客」，是药中上品，泡茶制酒入馔入药，流传至今：菊花糕、菊花粥、菊花豆腐、菊花鱼球、菊花扣肉、菊花溜蛋、菊花春卷……在日本，我还见过菊花天妇罗，炸后漂亮之至。</p>
+<figure>
+	<img src="./images/figure.jpg" alt="">
+</figure>
+<p>由于夏、桑、菊三者结合，可治发热感冒、头痛惊风，又能清肝解毒，在年前沙士疫症期间，是民间推介的药效饮品。</p>
+<p>因为病了，哪都不用去，专心服药休息，我才有机会「补习」这些课外常识。即便是药，「煮到来就食」的，也还好。</p>
+<p>意外躲不过，从容面对之。</p>
+</body>
+
+</html>

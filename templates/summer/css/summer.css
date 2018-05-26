@@ -1,0 +1,260 @@
+/*base*/
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:
+	border-box;
+	-webkit-box-sizing:border-box;
+}
+html{
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:100%;
+	-ms-touch-action:none;
+	margin:0;
+	padding:0;
+	height:100%;
+}
+body{
+	-webkit-overflow-scrolling:touch;
+	-webkit-font-smoothing:antialiased;
+	font-size:62.5%;
+	margin:0;
+	word-break:break-word;
+	text-align: center;
+	background: #fff;
+	border-bottom: 1px solid transparent;
+}
+/*无序有序列表*/
+ol,ul{text-align:left;line-height:30px;font-size:1.5em;letter-spacing: 0.6px;color:#808080;/*padding:10px 30px 10px 50px;*/}
+ol{padding:10px 30px 10px 50px;}
+ul{padding:10px 30px 10px 45px;}
+a,
+a:link,
+a:visited,
+a:active {
+	color:#3a7bf7;
+	-webkit-touch-callout:none;
+	text-decoration:none;
+	outline:none;
+	cursor:pointer;
+}
+a:hover{
+	color:#5991fa;
+}
+img,
+p,
+figure,
+h2,
+h3,
+pre,
+pre code{
+	display:block;
+	overflow:hidden;
+}
+img {
+	border:0;
+	margin:0px;
+}
+address {
+	font-style:normal;
+}
+
+h1,
+h2,
+h3,
+h6,
+b {
+	font-weight:normal;
+}
+h2 {
+	font-family: "FZXBSK--GBK1-0";
+	font-size: 26px;
+	color: #000000;
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+h3 {
+	font-family: "FZXBSK--GBK1-0";
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+b {
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	vertical-align: -1px;
+}
+.tc {
+	text-align: center;
+}
+.tl {
+	text-align: left;
+}
+.tr {
+	text-align: right;
+}
+blockquote {
+	box-sizing: border-box;
+	font-family: "HYa1gj";
+	font-size: 14px;
+	color: #808080;
+	line-height: 26px;
+	background-color: #F8F8F8;
+	padding: 10px 15px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	text-align: left;
+}
+p {
+	font-family: "HYa1gj";
+	font-size: 16px;
+	color: #515151;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	text-align: left;
+	
+}
+figure {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+figure img {
+	width: 100%;
+	max-width: 100%;
+}
+figcaption {
+	font-family: "HYa1gj";
+	font-size: 12px;
+	color:#a5a5a5;
+	line-height: 30px;
+	margin: 0 auto;
+	padding: 0 30px;
+	text-align: center;
+}
+p,h2,h3,blockquote,figure,.footbar,pre,ul,ol {
+	max-width: 512px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.headerBackground {
+	background-color:#EFEFEF;
+	background-position: center center;
+	background-size: cover;
+	padding-top:167px;
+	padding-bottom:167px;
+	min-height: 355px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.headerWrap {
+	display: inline-block;
+	border:1px solid #808080;
+	outline:8px solid #fff;
+	padding: 52px 62px 34px 62px;
+	background: #fff;
+	margin: 0 auto;
+}
+h1 {
+	width: 230px;
+	font-size: 52px;
+	letter-spacing: 2px;
+	color: #000000;
+	text-align: center;
+	font-family: "FZXBSK--GBK1-0";
+	margin: 0 auto 120px auto;
+	line-height: 62px;
+	position: relative;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+h1:after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	border:1px solid #808080;
+	transform: translate(-50%,0) rotateZ(45deg);
+	position: absolute;
+	left: 50%;
+	bottom: -60px;
+}
+address {
+	color:#515151;
+	text-align: center;
+	font-size: 0;
+}
+address img {
+	display: none;
+}
+h6 {
+	font-size: 24px;
+	font-family: "HYa1gj";
+	letter-spacing: 1px;
+	color: #515151;
+	margin: 0 0 8px 0;
+}
+time {
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-family: "HYa1gj";
+	color: #515151;
+	white-space: nowrap;
+}
+hr {
+	width: 6px;
+	height: 6px;
+	border:1px solid #808080;
+	margin: 20px auto;
+	transform:rotateZ(45deg);
+}
+body>hr:first-of-type {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+body>hr:last-of-type {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+@media screen and (max-width:588px) {
+	h1 {
+		width: 116px;
+		font-size: 26px;
+		line-height: 31px;
+		margin-bottom: 60px;
+	}
+	h1:after {
+		bottom: -30px;
+	}
+	h6 {
+		font-size: 12px;
+		margin-bottom: 4px;
+	}
+	time {
+		font-size: 12px;
+	}
+	p,h2,h3,blockquote {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width:415px) {
+	.headerBackground {
+		padding-top: 84px;
+		padding-bottom: 84px;
+	}
+	.headerWrap {
+		width: 184px;
+		min-height: 188px;
+		border:2px solid #808080;
+		outline:8px solid #fff;
+		padding: 26px 31px 17px 31px;
+		background: #fff;
+		margin: 0 auto;
+	}
+}

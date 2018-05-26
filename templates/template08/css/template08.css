@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*base*/
+html{-webkit-text-size-adjust:none;-ms-text-size-adjust:100%;-ms-touch-action:none;margin:0;padding:0;height:100%;}
+body{-webkit-overflow-scrolling:touch;-webkit-font-smoothing:antialiased;min-width:320px;font-size:62.5%;margin:0;text-align:center;word-break:break-word;}
+div,ul,ol,li,dl,dt,dd,h1,h2,h3,h6,p,b,i,a,header,mark,sup,sub,hr,br,video,audio,blockquote,time,figure,figcaption,img,footer,address,pre,code{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+A,A:link,A:visited,A:active{color:#3a7bf7;-webkit-touch-callout:none;text-decoration:none;outline:none;cursor:pointer;}
+A:hover{color:#5991fa;}
+figure{padding:20px 0px 0px 0px;}
+img,p,figure,h2,h3,pre,pre code{display:block;overflow:hidden;}
+img{border:0;margin:0px;}
+p + p{padding-top:0px;}
+h1,h2,h3,h6,b{font-weight:normal;}
+/*font*/
+body{font-family:'SourceHanSansCN-Regular';max-width:100%;padding:0px 0px 20px 0px;color:#404040;background:#fff;}
+h1,h2,h3,blockquote{font-family:'FZYANS_JW--GB1-0';}
+b{font-family:'SourceHanSansCN-Bold';}
+figcaption{font-family:'SourceHanSansCN-Light'}
+/*文本两端对齐*/
+p{/*text-align:justify;text-justify:inter-word;*/text-align:left;}
+/*page左右边距*/
+p,h2,h3,ul,ol,figure{margin:0px 28px;}
+/*title*/
+h1{color:#252525;font-size:3.6em;line-height:42px;padding:35px 52px 34px 52px;margin:0px;}
+h1:after,address{content:'';width:115px;height:1px;border-top:#f27242 5px solid;display:block;overflow:hidden;}
+h1:after{margin:38px auto 0px auto;}
+h2{font-size:2.4em;line-height:32px;text-align:left;padding:40px 0px 0px 0px;color:#252525;}
+h3{text-align:left;font-size:1.7em;line-height:1em;color:#333;padding:20px 0px 0px 0px;}
+/*正文|图片|图片描述*/
+p{padding:10px 0px;font-size:1.5em;line-height:26px;}
+/*p a{border-bottom:#404040 1px solid;}*/
+figure img{max-width:100%;padding:0px 0px 20px 0px;margin:0px auto;}
+figcaption{display:block;color:#252525;padding:0px 0px 20px 0px;line-height:27px;font-size:1.2em;letter-spacing:1px;text-align:right;text-indent:68px;}
+/*头图*/
+header{margin:0px auto;width:100%;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+header img{width:100%;padding:0;}
+address{margin:40px auto 0px auto;padding-bottom:20px;}
+/*导语引用*/
+blockquote{position:relative;padding:23px 52px 20px 52px;margin:0px auto;font-size:1.5em;color:#9f9f9f;line-height:26px;display:block;}
+blockquote:before{background-image:url('../images/template08/quotation_marks_left.png');}
+blockquote:after{background-image:url('../images/template08/quotation_marks_right.png');}
+blockquote:before,blockquote:after{content:'';width:15px;height:11px;position:absolute;margin:0px;overflow:hidden;background-position:left top;background-size:15px 11px;background-repeat:no-repeat;}
+blockquote:before{left:27px;top:23px;}
+blockquote:after{right:27px;bottom:20px;}
+/*无序有序列表*/
+ol,ul{text-align:left;line-height:26px;font-size:1.5em;position:relative;list-style-type:none;}
+ul li:before{background:#f99f75;content:'';width:6px;height:6px;border-radius:6px;overflow:hidden;position:absolute;left:0px;margin-top:9px;}
+ul li,ol li{padding:8px 0px;}
+ul{padding:20px 0px 20px 16px;}
+ol{counter-reset:sectioncounter;padding:20px 0px 20px 20px;}
+ol li:before{content:counter(sectioncounter) ".";counter-increment:sectioncounter;color:#f99F75;position:absolute;left:0px;}
+/*分割线*/
+hr{height:1px;overflow:hidden;border:none;background:#e1e1e1;margin:40px 28px;}
+
+/*code*/
+pre{margin:20px 28px;padding:10px;display: block; background-color: #fafafa; border: 1px solid hsl(0, 0%, 90%); border-radius: 5px; overflow: hidden;text-align: left;}
+code{text-align: left; background-color: transparent !important; white-space: pre-wrap; font: normal 14px Consolas, Monaco, monospace;}
+p code{background-color: #fafafa !important;border: 1px solid hsl(0, 0%, 90%);border-radius: 5px !important;white-space: normal !important;padding: 0px 5px;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+/*pc|ipad*/
+@media only screen and (min-width:770px){
+	body{background:#5E6673;background:-webkit-gradient(linear, 0 0, 0 top, from(rgba(140, 149, 160, 1)), to(rgba(91, 102, 115, 1)));}
+	p,h1,h2,h3,ul,ol,figure,hr,.footbar,pre{margin-left:auto;margin-right:auto;max-width:664px;}
+	p,h1,h2,h3,ul,ol,figure,pre{margin:0px 74px;}
+	h1{padding-left:0px;padding-right:0px;}
+	blockquote{max-width:656px;}
+	.container {margin:50px auto;background:#fff;padding-bottom:50px;box-shadow: 0px 1px 2px 0px rgba(27,29,32,.5),0px 10px 12px 0px rgba(27,29,32,.25),0px 20px 30px 0px rgba(27,29,32,.15),0px 0px 50px 0px rgba(27,29,32,.2);max-width: 750px;
+		}
+	.footbar{max-width:603px;}
+}
+/*2016年5月24日22:26:16*/

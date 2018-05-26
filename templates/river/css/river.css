@@ -1,0 +1,339 @@
+/*base*/
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:
+	border-box;
+	-webkit-box-sizing:border-box;
+}
+html{
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:100%;
+	-ms-touch-action:none;
+	margin:0;
+	padding:0;
+	height:100%;
+}
+body{
+	-webkit-overflow-scrolling:touch;
+	-webkit-font-smoothing:antialiased;
+	font-size:62.5%;
+	margin:0;
+	word-break:break-word;
+	text-align: center;
+	background: #fff;
+	border-bottom: 1px solid transparent;
+}
+
+/*无序有序列表*/
+ol,ul{
+	text-align:left;
+	line-height:30px;
+	font-size:1.5em;
+	letter-spacing: 0.6px;
+	color:#808080;
+	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	list-style-position: outside;
+	/*padding:10px 30px 10px 50px;*/
+	margin: 40px 0;
+	
+	padding: 0 0 0 18px ;
+}
+li {
+	padding: 0 0 0 16px;
+	margin: 0 0 16px 0;
+}
+a,
+a:link,
+a:visited,
+a:active {
+	color:#3a7bf7;
+	-webkit-touch-callout:none;
+	text-decoration:none;
+	outline:none;
+	cursor:pointer;
+}
+a:hover{
+	color:#5991fa;
+}
+img,
+p,
+figure,
+h2,
+h3,
+pre,
+pre code{
+	display:block;
+	overflow:hidden;
+}
+img {
+	border:0;
+	margin:0px;
+}
+address {
+	font-style:normal;
+}
+.tl {
+	text-align: left;
+}
+.tc {
+	text-align: center;
+	text-indent: 0;
+}
+.tr {
+	text-align: right;
+	text-indent: 0;
+}
+h1,
+h2,
+h3,
+h6 {
+	font-weight:normal;
+}
+b {
+	vertical-align: -1px;
+	font-weight: normal;
+	font-family: "Source-Han-Serif-CN-SemiBold";
+}
+@font-face {
+	font-family: "st";
+	src:url("../images/Songti-SC-Bold.ttf") format("truetype");
+}
+header {
+	padding: 144px 32px 32px;
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(216,216,216,.1);
+}
+header.active h1,header.active h6,header.active time {
+	color: #fff;
+}
+header.active h1:before,header.active h1:after {
+	background: url('../images/drop_water.png');
+	background-size: cover;
+}
+h1 {
+	width: 190px;
+	font-size: 28px;
+	letter-spacing: 2px;
+	position: relative;
+	color: #4a4a4a;
+	text-align: center;
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	line-height: 40px;
+	position: relative;
+	word-break:break-all;
+	word-wrap:break-word;
+	margin: 0 auto 112px;
+	text-align: center;
+}
+h1:before,h1:after {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 21px;
+	background: url('../images/drop_water_dark.png');
+	background-size: cover;
+}
+h1:before {
+	transform:rotateZ(180deg);
+	left: -210px;
+	top: 0;
+}
+h1:after {
+	right: -210px;
+	bottom: 0;
+}
+h2 {
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	font-size: 20px;
+	color: #4a4a4a;
+	letter-spacing: 2px;
+	line-height: 32px;
+	text-align: center!important;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	position: relative;
+	padding:0 64px;
+	box-sizing: border-box;
+}
+h2:before,h2:after {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 21px;
+	background: url('../images/drop_water_dark.png');
+	background-size: cover;
+}
+h2:before {
+	left: 16px;
+	top: 5.5px;
+	transform: rotateZ(180deg) scale(.4);
+	-webkit-transform: rotateZ(180deg) scale(.4);
+	
+}
+h2:after {
+	right: 16px;
+	bottom: 5.5px;
+	transform:  scale(.4);
+	-webkit-transform:  scale(.4);
+}
+h3 {
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center!important;
+}
+
+blockquote {
+	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;;
+	font-size: 15px;
+	color: #a4a4a4;
+	padding-left: 16px;
+	line-height: 24px;
+	letter-spacing: .5px;
+	text-align: left;
+	border-left:2px solid #A4A4A4;
+	margin-top:40px;
+	margin-bottom: 40px;
+}
+p {
+	font-size: 16px;
+	color: #6e6e6e;
+	letter-spacing: 0.5px;
+	line-height: 28px;
+	margin: 16px 16px;
+	text-align: left;
+	text-indent: 2em;
+	font-family: "Source-Han-Serif-CN"
+}
+figure {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+figure img {
+	width: 100%;
+	max-width: 100%;
+}
+figcaption {
+	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;;
+	font-size: 12px;
+	color:#a5a5a5;
+	line-height: 18px;
+	letter-spacing: .5px;
+	margin:8px auto;
+	padding: 0 64px;
+	text-align: center!important;
+	position: relative;
+	box-sizing: border-box;
+}
+figcaption:before,figcaption:after {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #A4A4A4;
+}
+figcaption:before {
+	top:7px;
+	left: 32px;
+}
+figcaption:after {
+	right: 32px;
+	bottom: 7px;
+}
+p,h2,h3,blockquote,figure,.footbar,pre,ul,ol {
+	max-width: 568px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footbar {
+	margin-bottom: 30px;
+}
+address {
+	color:#515151;
+	text-align: right;
+	font-size: 0;
+}
+address img {
+	display: none;
+}
+h6 {
+	font-size: 12px;
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	letter-spacing: 1px;
+	color: #515151;
+	margin: 0 0 8px 0;
+}
+time {
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-family: "Source-Han-Serif-CN-SemiBold";
+	color: #515151;
+	white-space: nowrap;
+}
+hr {
+	width: 80px;
+	height: 8px;
+	margin-top: 72px;
+	margin-bottom: 72px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url('../images/hr.png');
+	background-size: 100% 100%;
+	outline: none;
+	border: none;
+}
+.end {
+	font-family: "st";
+	font-size: 16px;
+	color: #4A4A4A;
+	margin-top: 100px;
+	margin-bottom: 80px;
+	width: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.end:before,.end:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	width: 16px;
+	height: 21px;
+	background: url('../images/drop_water_dark.png');
+	background-size: cover;
+	margin-left: -8px;
+}
+.end:before {
+	top: -24px;
+	transform: rotateZ(180deg) scale(.4);
+	-webkit-transform: rotateZ(180deg) scale(.4);
+	
+}
+.end:after {
+	bottom: -24px;
+	transform:  scale(.4);
+	-webkit-transform:  scale(.4);
+}
+@media screen and (max-width:588px) {
+	h1:before {
+		left: -60px;
+	}
+	h1:after {
+		right: -60px;
+	}
+	p,h2,h3,blockquote,figure,ul,ol {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	h4 {
+		width: 64px;
+		height: 10px;
+	}
+}
