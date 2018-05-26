@@ -277,7 +277,7 @@ function(e, t, i) {
     },
     e.zi.stateGary = 1,
     function() {
-        if (zi.weixin) {
+        if (1) {
             document.write('<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>');
             var i = function() {
                 messagebus.subscribe("core.share", function(i, r) {
@@ -340,7 +340,7 @@ function(e, t, i) {
                         timestamp: e.timestamp,
                         nonceStr: e.nonceStr,
                         signature: e.signature,
-                        jsApiList: ["onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareTimeline", "hideMenuItems", "showMenuItems", "previewImage"]
+                        jsApiList: ["getLocation", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareTimeline", "hideMenuItems", "showMenuItems", "previewImage"]
                     }),
                     wx.ready(function(e) {
                         zi.wxError || i()
@@ -355,7 +355,7 @@ function(e, t, i) {
                                 timestamp: e.timestamp,
                                 nonceStr: e.nonceStr,
                                 signature: e.signature,
-                                jsApiList: ["onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareTimeline", "hideMenuItems", "showMenuItems", "previewImage"]
+                                jsApiList: ["getLocation", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareTimeline", "hideMenuItems", "showMenuItems", "previewImage"]
                             }),
                             wx.ready(function() {
                                 zi.wxError || i()
