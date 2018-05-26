@@ -185,7 +185,7 @@ function(e, t, i) {
     zi.updateHtmlTitle = function(e) {
         var i = t("body");
         document.title = e;
-        var r = t('<iframe src="/w/favicon.ico" style="display:none"></iframe>').on("load", function() {
+        var r = t('<iframe src="https://zi.com/w/favicon.ico" style="display:none"></iframe>').on("load", function() {
             setTimeout(function() {
                 r.off("load").remove()
             }, 0)
@@ -243,8 +243,8 @@ function(e, t, i) {
     zi.weixin = "micromessenger" == navigator.userAgent.toLowerCase().match(/MicroMessenger/i),
     zi.weibo = "weibo" == navigator.userAgent.toLowerCase().match(/WeiBo/i),
     e.shareData || (e.shareData = {
-        timeLineImg: "/w/images/logo.jpg",
-        friendImg: "/w/images/logo.jpg",
+        timeLineImg: "https://zi.com/w/images/logo.jpg",
+        friendImg: "https://zi.com/w/images/logo.jpg",
         timeLineLink: "",
         sendFriendLink: "",
         weiboLink: "",
@@ -322,17 +322,28 @@ function(e, t, i) {
                 wx.checkJsApi({
                     jsApiList: ["getLocation"],
                     success: function(res) {
-                        alert(JSON.stringify(res.checkResult.getLocation));
                         if (res.checkResult.getLocation == false) {
                             alert('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
                             return;
                         }
+                        wx.getLocation({
+                            success: function (res) {
+                                var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                                var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                                var speed = res.speed; // 速度，以米/每秒计
+                                var accuracy = res.accuracy; // 位置精度
+                                alert.log(JSON.stringify(res))
+                            },
+                            cancel: function (res) {
+                                alert('用户拒绝授权获取地理位置');
+                            }
+                        });
                     }
                 })
             }
               , r = encodeURIComponent(location.href.replace(/\#.*/, ""));
             try {
-                t.getJSON("https://zi.com/zi/mp/jsapi?url=" + r, function(e) {
+                t.getJSON("https://zi.com/zi/mp/jsapi?url=", function(e) {
                     zi.wxError = !1,
                     wx.config({
                         debug: !1,
