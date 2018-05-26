@@ -381,7 +381,11 @@ function(e, t, i) {
                         })
                     })
                 })
-            } catch (e) {}
+            } catch (e) {
+                var p = document.createElement("p")
+                p.innterText = e
+                document.body.append(p)
+            }
         }
     }()
 }(window, Zepto);
