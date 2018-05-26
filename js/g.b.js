@@ -278,7 +278,7 @@ function(e, t, i) {
     e.zi.stateGary = 1,
     function() {
         if (1) {
-            document.write('<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>');
+            document.write('<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>');
             var i = function() {
                 messagebus.subscribe("core.share", function(i, r) {
                     console.info(i, "***"),
