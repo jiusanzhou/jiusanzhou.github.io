@@ -1,0 +1,66 @@
+baseUrl: https://blog.wellwell.work/w
+languageCode: zh_CN
+title: 记录-好好工作
+favicon: favicon.ico
+
+# permalinks: /:title/
+menu:
+  - identifier: about
+    name: about wellwellwork
+    pre: <i class='fa fa-heart'></i>
+    url: /about/
+    weight: -110
+
+params:
+  templatePrefix: https://blog.wellwell.work/templates
+  template: template04
+  css:
+  - https://zi.com/w/css/public.min.css
+  js:
+  - https://zi.com/w/js/article.min.js
+  autothumbnailimage: true
+  menu:
+    主頁: /
+    分類: /category
+    關於我: /about-me
+    研究: /lab
+    項目: /projects
+  subnav:
+    github: https://github.com/jiusanzhou
+    weibo: http://weibo.com/jsz3
+    rss: #
+    zhihu: #
+    jianshu: #
+    wechat: #
+  
+  rss: atom.xml
+  
+  root:
+
+  excerpt_title: ...
+  show_all_title: 全文
+  math_jax: true
+  target_blank: true
+
+  # 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+  reward_type: 2
+  reward_words: 請作者喝杯咖啡
+  reward_method:
+    alipay:
+    wechat:
+    paypal:
+
+  analytics:
+    google:
+    baidu:
+  
+  favicon:
+  appleicon:
+
+  comment:
+    disque: 
+
+  smart_menu:
+    archive: 所有文章
+    friends: 友情鏈接
+    about_me: 關於我

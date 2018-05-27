@@ -1,0 +1,422 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>SPA Mithril文档 - 记录-好好工作</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  
+  <title>SPA Mithril文档</title>
+  <meta name="description" content="
+本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。
+
+
+">
+  
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="/favicon.png">
+  
+  
+  <meta itemprop="name" content="SPA Mithril文档 - 记录-好好工作">
+  <meta itemprop="description" content="
+本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。
+
+
+">
+  <meta itemprop="image" content="img/author.jpg">
+  
+  
+  <meta name="twitter:description" content="">
+  
+  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+
+  
+  <meta name="description" content="
+本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。
+
+
+">
+  <meta property="og:description" content="
+本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。
+
+
+">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="SPA Mithril文档">
+  <meta property="og:url" content="/w/post/2015-12-29-mithril-page/">
+  <meta property="og:site_name" content="记录-好好工作">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="记录-好好工作">
+  <meta name="twitter:description" content="
+本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。
+
+
+">
+  
+  
+
+  
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  
+    <link rel="stylesheet" href="https://zi.com/w/css/public.min.css">
+  
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="https://blog.wellwell.work/templates/river/css/river.css?_=3">
+  
+  
+
+  
+    
+  
+</head>
+<body>
+    
+        <header class="active" style='background-image: url("");'>
+    <h1>SPA Mithril文档</h1>
+    <address>
+        <h6></h6>
+        <time data-format="简M月d日">0001-01-01 00:00:00 &#43;0000 UTC</time>
+    </address>
+</header>
+    
+    <div class="container">
+        <blockquote>
+<p>本项目，是在Typecho的基础上进行的扩展开发，并尽量使用其API来开发功能。由于他提供的钩子并不能完全满足开发需要，所欲有部分是接增加了他的源码，具体下面说明。</p>
+</blockquote>
+
+<p></p>
+
+<h2 id="0-开发">0. 开发</h2>
+
+<h3 id="0-主要功能">0. 主要功能</h3>
+
+<ul>
+<li>数据请求的API接口</li>
+<li>单页应用的主题</li>
+<li>提供类似<code>jeklly</code>的编辑模版,提高页面的灵活性</li>
+</ul>
+
+<h3 id="1-说明">1. 说明</h3>
+
+<p>插件名：API
+主题名：Mithril SPA</p>
+
+<p>没时间仔细看Typecho的源码，基本没有使用他的公有函数</p>
+
+<h3 id="2-新增和修改的数据库结构">2. 新增和修改的数据库结构</h3>
+
+<h4 id="2-1新增">2.1新增</h4>
+
+<ul>
+<li><code>resources</code>表，保存请求的资源（只增未减）</li>
+<li><code>rls_resources</code>表，文章与异步资源的关系表</li>
+<li><code>banners</code>表，文章封面表（拆开主要是为了扩展，多文章同封面），（只增未减）</li>
+</ul>
+
+<h4 id="2-2增加字段">2.2增加字段</h4>
+
+<ul>
+<li>在<code>contents</code>表中增加了<code>bid</code>字段，封面</li>
+</ul>
+
+<h3 id="3-api接口">3. API接口</h3>
+
+<p>入口： <code>index.php/api/</code></p>
+
+<blockquote>
+<p>现版不可设置</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th align="center">地址</th>
+<th align="center">请求</th>
+<th align="center">返回</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><code>config.json</code></td>
+<td align="center"></td>
+<td align="center">网站配置信息(<code>json</code>)</td>
+<td align="center">供前端初始化使用</td>
+</tr>
+
+<tr>
+<td align="center"><code>pages.json</code></td>
+<td align="center"></td>
+<td align="center">独立页面列(<code>json</code>)表</td>
+<td align="center">渲染<code>header</code>上的<code>nav bar</code>，现版本是在后渲染</td>
+</tr>
+
+<tr>
+<td align="center"><code>pagesfull.json</code></td>
+<td align="center"></td>
+<td align="center">独立页面列表，包含独立页面的具体内容(<code>json</code>)</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center"><code>page/$.json</code></td>
+<td align="center">页面的<code>slug</code></td>
+<td align="center">页面数据(<code>json</code>)</td>
+<td align="center">给<code>js</code>在点击导航栏的链接后加载使用，即展示新页面</td>
+</tr>
+
+<tr>
+<td align="center"><code>post/$.json</code></td>
+<td align="center">文章的<code>cid</code></td>
+<td align="center">文章数据(<code>html</code>)</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="4-用到的外部库">4. 用到的外部库</h3>
+
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">官网</th>
+<th align="center">作用</th>
+<th align="center">路径</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Twig</td>
+<td align="center"><a href="http://twig.sensiolabs.org/">http://twig.sensiolabs.org/</a></td>
+<td align="center">完成自定义渲染功能</td>
+<td align="center"><code>plugins/mithril/Twig/</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="5-有待完善的功能">5. 有待完善的功能</h3>
+
+<ul>
+<li>二级分类</li>
+<li>封面管理</li>
+<li>异步资源管理</li>
+<li>七牛或者新浪的Storage文件上传</li>
+<li>上传文件的管理</li>
+<li>在完成文件上传之后，对图片和异步文件的添加通过文件管理完成。</li>
+<li>编辑器扩展</li>
+<li>前端后天数据的过滤、检查等</li>
+<li>把各种数据抽取出来，通过后台设置完成</li>
+<li>对用户写入的地址进行容错（主要是相对路径问题）处理</li>
+<li>Twig的模板存储，现版本是直接<code>new</code>一个新的</li>
+<li>后台管理SPA</li>
+</ul>
+
+<h3 id="6-源码修改">6. 源码修改</h3>
+
+<table>
+<thead>
+<tr>
+<th align="center">文件</th>
+<th align="center">行数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">admin/custom-fields.php</td>
+<td align="center">7</td>
+<td align="center">增加一个钩子，异步资源，封面数据的发布</td>
+</tr>
+
+<tr>
+<td align="center">admin/custom-fields-js.php</td>
+<td align="center"></td>
+<td align="center">输出js文件</td>
+</tr>
+
+<tr>
+<td align="center">var/Widget/Contents/Post/Edit.php</td>
+<td align="center">586</td>
+<td align="center">获取已经添加的异步资源</td>
+</tr>
+
+<tr>
+<td align="center">var/Widget/Contents/Post/Edit.php</td>
+<td align="center">586</td>
+<td align="center">获取已经添加的封面</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="1-使用">1. 使用</h2>
+
+<h3 id="0-注意事项">0. 注意事项</h3>
+
+<ul>
+<li>独立页面中的<code>slug</code>为<code>index</code>的文件谨慎修改内容，不能修改或者删除<code>index</code></li>
+<li>Mithril是支持3种url模式的，但由于数据实在后台渲染完成，用的是<code>#</code>模式，所以不得修改前端的<code>route.model</code></li>
+<li>现版本的<code>meta</code>等数据是没有从后台获取是直接在<code>index</code>文件中，直接修改即可</li>
+<li>各个需要提交数据的地方没有做数据检查，所以请按规定格式填入数据，有错误没有提示</li>
+<li>封面两项的数据均为<code>varchar(255)</code>，所以不要超过</li>
+<li>独立页面的语法请参考<code>Twig</code>的文档</li>
+<li>缩略名尽量不要含有<code>-</code>，如果有的话，在选取的时候应该用<code>posts['a-b']</code>，而不是<code>posts.a-b</code></li>
+<li><code>slug</code>需要作为链接id使用，特别是在独立页面</li>
+<li>独立页面的<code>slug</code>是和<code>main.js</code>中的api写死对应，所以不要单独修改独立页的<code>slug</code></li>
+</ul>
+
+<h3 id="1-使用说明">1. 使用说明</h3>
+
+<p>在独立页面中有两个（应该是三个）变量，</p>
+
+<ul>
+<li><code>posts</code></li>
+<li><del><code>site</code></del></li>
+<li><code>theme</code></li>
+</ul>
+
+<p>在独立页面模版中，<code>\{\%  \%\}</code>为代码段，<code>{{  }}</code>为变量取值</p>
+
+<p><code>posts</code>的数据为所有分类发布的文章，不包括独立页面。示例数据如下：</p>
+
+<pre><code class="language-json">{
+    news: {
+        count: 5,
+        name: &quot;新闻&quot;,
+        description: &quot;新闻分类的描述&quot;,
+        slug: &quot;news&quot;,
+        articles: [
+            {   
+                title: &quot;第一篇新闻&quot;
+                author: &quot;John&quot;,
+                excerp: &quot;摘要一共100字，超过部分是'...'，现版本不支持自定义&quot;,
+                time: &quot;1454312047128&quot;,
+                banner: {
+                    img: &quot;http://...&quot;,
+                    title: &quot;显示在封面上的文字&quot;
+                },
+                text: &quot;正文全文...&quot;
+            },
+            ...
+        ]
+    }
+}
+</code></pre>
+
+<p>在新闻的页面中显示新闻</p>
+
+<pre><code class="language-html">&lt;h2&gt;{{ posts.news.name }}&lt;h2&gt;
+&lt;p&gt;一共有：{{ posts.news.count }}篇, posts.news.description&lt;/p&gt;
+{% for item in posts.news.articles %}
+&lt;div class=&quot;news-item&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+        &lt;img src=&quot;{{ item.banner.img }}&quot; alt=&quot;{{ item.banner.title }}&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+        &lt;h3&gt;&lt;a href=&quot;#/view/{{ item.slug }}&quot;&gt;{{ item.title }}&lt;/a&gt;&lt;/h3&gt;
+        &lt;p&gt;&lt;span&gt;{{ item.author }}&lt;/psan&gt;发表于，{{ item.time | D-M-Y }}&lt;/p&gt;
+        &lt;p&gt;{{ item.excerp }}&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endfor %}
+</code></pre>
+
+<h3 id="2-现版本可用变量">2. 现版本可用变量</h3>
+
+<h4 id="2-1-独立文章发布页">2.1 独立文章发布页</h4>
+
+<ul>
+<li>posts</li>
+</ul>
+
+<pre><code class="language-json">{
+    news: {
+        count: 5,
+        name: &quot;新闻&quot;,
+        description: &quot;新闻分类的描述&quot;,
+        slug: &quot;news&quot;,
+        articles: [
+            {   
+                title: &quot;第一篇新闻&quot;
+                author: &quot;John&quot;,
+                excerp: &quot;摘要一共100字，超过部分是'...'，现版本不支持自定义&quot;,
+                time: &quot;1454312047128&quot;,
+                banner: {
+                    img: &quot;http://...&quot;,
+                    title: &quot;显示在封面上的文字&quot;
+                },
+                text: &quot;正文全文...&quot;
+            },
+            ...
+        ]
+    },
+    ...
+}
+</code></pre>
+
+<ul>
+<li>theme</li>
+</ul>
+
+<pre><code>{
+    url: &quot;usr/themes/Mithril/&quot;
+}
+</code></pre>
+
+<h4 id="2-2-index框架页">2.2 INDEX框架页</h4>
+
+<ul>
+<li>posts
+同上</li>
+
+<li><p>headers</p>
+
+<pre><code class="language-json">[
+{
+    slug: &quot;news&quot;,
+    title: &quot;新闻&quot;
+},
+...
+]
+</code></pre></li>
+
+<li><p>theme</p></li>
+</ul>
+
+<pre><code>{
+    url: &quot;usr/themes/Mithril/&quot;
+}
+</code></pre>
+    </div>
+</body>
+
+  
+
+</html>
