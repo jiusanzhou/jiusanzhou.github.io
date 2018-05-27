@@ -2,7 +2,7 @@ baseUrl: https://blog.wellwell.work/w
 languageCode: zh_CN
 title: 记录-好好工作
 favicon: favicon.ico
-
+theme: ../../../projects/zi
 # permalinks: /:title/
 menu:
   - identifier: about
