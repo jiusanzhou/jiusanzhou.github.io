@@ -1,4 +1,6 @@
 @charset "utf-8";
+@font-face{font-family:"body";src:url("https://font.zi.com/20180509/7f385py_body.bmp?v=1525852220000") format("woff");}body{font-family:"body";}@font-face{font-family:"h6";src:url("https://font.zi.com/userfont/58a77fb90cf285a75ad4293a0a071e3a-9060-490f-86e7-d82c85012907_h6.bmp?v=1523799835000") format("woff");}h6{font-family:"h6";}
+
 /*base*/
 html{-webkit-text-size-adjust:none;-ms-text-size-adjust:100%;-ms-touch-action:none;margin:0;padding:0;height:100%;}
 body{-webkit-overflow-scrolling:touch;-webkit-font-smoothing:antialiased;min-width:320px;font-size:62.5%;margin:0;word-break:break-word;}
