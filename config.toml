@@ -1,0 +1,76 @@
+baseurl         = "/"
+theme           = "hugo-casper-two"
+languageCode    = "zh-CN"
+disqusShortname = "wellwellwork"
+paginate        = 6
+
+canonifyurls    = true
+
+[params]
+  title       = "好好工作"
+  subtitle    = "为效率而生!"
+  copyright   = "© 2018"
+  cover       = "img/blog-cover.jpg"
+  description = "好好工作，创造一切可能!"
+  metaDescription = ""
+  googleAnalytics = "UA-101239170-3"
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "wellwellwork"
+  fbName = "wellwellwork"
+  githubName = "wellwellwork"
+  linkedinName = "wellwellwork"
+  mediumName = "wellwellwork"
+  weiboName = "wellwellwork"
+
+  logo = "https://avatars1.githubusercontent.com/u/28754924?s=200&v=4"
+  orgName = "好好工作"
+  orgWebsite = "https://wellwell.work"
+  orgDescription = "好工作，创造一切可能!"
+
+  showSupport = false
+
+  author = "周筱鲁"
+  authorAvatar = "https://avatars1.githubusercontent.com/u/2942042?s=460&v=4"
+  authorLocation = "Hangzhou, CN"
+  authorWebsite = "https://annan.tk"
+  authorDescription = "知行合一!"
+
+  pageNotFoundTitle = "404 - 页面未找到"
+
+  #casper or caspertwo
+  singleViewStyle = "caspertwo"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[[menu.main]]
+  name = "好好工作"
+  url = "https://wellwell.work"
+  weight = 200
+
+[[menu.main]]
+  name = "博客"
+  url = "/"
+  weight = 100
+
+[[menu.main]]
+  name = "分类"
+  url = "/categories/"
+  weight = 99
+
+[[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 98
+
+[[menu.main]]
+  name = "分类"
+  url = "/archives/"
+  weight = 97
+
+[[menu.main]]
+  name = "产品"
+  url = "https://wellwell.work/products"
+  weight = 95
