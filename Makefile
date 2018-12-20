@@ -1,12 +1,12 @@
 theme_dir=themes/hugo-casper-two
 
-default: dep build
+default: dep build clean
 
 dep:
-	@rm -rf $(theme_dir) && @git clone https://github.com/jiusanzhou/hugo-casper-two $(theme_dir)
+	git clone https://github.com/jiusanzhou/hugo-casper-two $(theme_dir)
 
 build:
-	@hugo
+	hugo
 
 clean:
-	@rm -rf themes
+	rm -rf themes
