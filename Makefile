@@ -1,6 +1,6 @@
 theme_dir=themes/hugo-casper-two
 
-default: dep build clean
+default: clean dep build clean
 
 dep:
 	git clone https://github.com/jiusanzhou/hugo-casper-two $(theme_dir)
