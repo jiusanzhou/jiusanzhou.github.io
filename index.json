@@ -1,5 +1,0 @@
----
-layout: json-index
----
-
-{"data":[{% for post in site.posts %}{"title":"{{ post.title }}","entry":"{{ post.excerpt | strip_html }}","date":"{{ post.date | date: "%Y, %m %d" }}","url":"{{ post.url }}"},{% endfor %}]}
