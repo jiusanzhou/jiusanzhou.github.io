@@ -8,9 +8,10 @@ canonifyurls    = true
 
 [params]
   title       = "好好工作"
-  subtitle    = "为效率而生!"
+  subtitle    = "好好工作，为效率而生!"
+  favicon     = "https://wellwell.work/favicon-32x32.png"
   copyright   = "© 2018"
-  cover       = "img/blog-cover.jpg"
+  cover       = ""
   description = "好好工作，创造一切可能!"
   metaDescription = ""
   googleAnalytics = "UA-101239170-3"
@@ -18,11 +19,7 @@ canonifyurls    = true
   RSSLink = ""
 
   twitterName = "wellwellwork"
-  fbName = "wellwellwork"
   githubName = "wellwellwork"
-  linkedinName = "wellwellwork"
-  mediumName = "wellwellwork"
-  weiboName = "wellwellwork"
 
   logo = "https://avatars1.githubusercontent.com/u/28754924?s=200&v=4"
   orgName = "好好工作"
@@ -69,8 +66,3 @@ canonifyurls    = true
   name = "分类"
   url = "/archives/"
   weight = 97
-
-[[menu.main]]
-  name = "产品"
-  url = "https://wellwell.work/products"
-  weight = 95
