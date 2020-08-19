@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no" />
+	<link href="css/template12.css" rel="stylesheet" type="text/css" media="screen">
+	<title>Minecraft</title>
+	<script type="text/javascript" id="headscript">
+	window.onload=function(){
+		var h1 = document.querySelectorAll("h1")[0];
+		var header = document.querySelectorAll("header")[0];
+		var headerImg = document.querySelectorAll("header img")[0].getAttribute("src");
+		var body =	document.querySelectorAll("body")[0];
+		h1.style.marginTop='-'+(h1.clientHeight/2)+'px';
+		header.remove();
+		h1.remove();
+		// header.removeChild(header.childNodes[0]);
+		// h1.removeChild(h1.childNodes[0]);
+		var content = document.createElement('div');
+			content.className = 'container';
+			content.innerHTML = body.innerHTML;
+			body.innerHTML = '';
+		var cover = document.createElement('div');
+			cover.className = 'cover';
+			cover.innerHTML = '';
+			cover.innerHTML+='<header style="background-image: url('+headerImg+')">'
+						   + h1.outerHTML
+						   +'</header>'
+						   +'<div class="blocks"></div>';
+			body.appendChild(cover);
+			body.appendChild(content);
+			// document.querySelector("#headscript").remove();
+	}
+	</script>
+</head>
+<body>
+	<header><img src="images/template12/header.jpg"></header>
+	<h1>红石电路的一点微小心得</h1>
+	<p>今天我将教大家如何制作红石脉冲，以便制作红石连弩，闪光灯等。</p>
+	<h2>工具/原料准备</h2>
+
+	<ul>
+		<li>红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干红石中继器若干</li>
+		<li>拉杆若干</li>
+		<li>红石粉末若干</li>
+		<li>任意方块（除红石方块）若干</li>
+	</ul>
+
+	<figure>
+		<img src="images/template12/testimage.jpg">
+		<figcaption>连接红石线与开关</figcaption>
+	</figure>
+
+	<p>想让电路停下，就拉开拉杆，想再次让电流旋转，就先保持拉杆关闭，打掉一个红石再放回去，然后执行第五步。</p>
+
+	<h3>方法/步骤</h3>
+
+	<p>考验手速的时候到了，现在拉开拉杆并立马关上。发现电流开始转圈而且速度超慢，这是为什么中继器调四档的原因。
+同样考验手速，保持电流转动，时刻保持着，快速把所有中继器调成一档。
+并且在红石的旁边连接一个红石，再连上需要红石的器具，如发射器。</p>
+
+	<blockquote>首先，准备任意方块8个，在地面上围成一个正方形框架，注意是地面上，请参考注意事项。然后再框架的四个角上放置红石粉末,再放置一个任意方块，用红石连接拉杆。 </blockquote>
+
+	<address>
+		<time data-format="yy/MM/dd">16/07/01</time>
+	</address>
+</body>
+</html>

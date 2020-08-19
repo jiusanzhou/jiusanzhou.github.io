@@ -1,0 +1,288 @@
+body {
+	font-family: "Microsoft Jhenghei", Georgia,Cambria,"Times New Roman",Times,"Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+	font-weight:300;
+	font-size:1.5rem;
+	background:#eee;
+	color:#666;
+	overflow-y: scroll;
+}
+
+::selection {
+  color: #0aa284;
+  background: #aea
+}
+
+::-moz-selection {
+  color: #0aa284;
+  background: #aea
+}
+
+a {
+	text-decoration:none;
+	color: #de533a;
+}
+
+pre, pre code {
+	font-size: 16px;
+}
+
+pre, code {
+	background-color: #f8f8f8;
+	font-family: Menlo,Monaco,Consolas,"Lucida Console","Courier New",monospace;
+	border-radius: 3px;
+}
+
+code {
+    color: #c7254e;
+    border: 1px solid #eaeaea;
+    margin: 0 2px;
+    padding: 0 5px;
+    line-height: 24px;
+}
+
+pre {
+    color: #444;
+    padding: 20px 30px;
+    line-height: 19px;
+    margin: 30px 0;
+	overflow: auto;
+}
+
+pre code {
+    color: #444;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+
+}
+
+blockquote {
+	background-color: #f3f3f0;
+	margin: 0;
+	padding: 1em 0;
+	border-left: 4px solid #0aa284;
+}
+
+blockquote p {
+	margin-left: 1em;
+}
+
+blockquote p::before {
+	content: "\f10d";
+	font-family: "FontAwesome";
+	color: #d65050;
+	font-size: 1em;
+	padding-right: 2em;
+}
+
+blockquote p::after {
+	content: "\f10e";
+	font-family: "FontAwesome";
+	color: #d65050;
+	font-size: 1em;
+	padding-left: 2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "freight-text-pro","Microsoft Yahei",Georgia,Cambria,"Times New Roman",Times,"Hiragino Sans GB",sans-serif !important
+}
+
+textarea, input[type="text"], input[type="submit"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input, .dropdown-menu, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+	box-shadow: none;
+	text-shadow: none;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {
+	border: 1px solid #d65050;
+}
+
+select,textarea,input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+	background-color: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 0;
+	color: #767676;
+	height: 50px;
+	padding: 4px 20px;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.post-title {
+	margin: .83em 0;
+	font-size: 1.4em;
+}
+
+.article-detail {
+	line-height: 1;
+}
+
+.page-navigator {
+	list-style: none;
+	margin: 25px 0;
+	padding: 0;
+	text-align: center;
+}
+
+.page-navigator li {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.page-navigator a {
+	display: inline-block;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.page-navigator a:hover {
+	background: #EEE;
+	text-decoration: none;
+}
+
+.page-navigator .current a {
+	color: #444;
+	background: #EEE;
+}
+
+
+.container {
+	position: relative;
+  	min-height: 100%;
+}
+
+.header {
+	//background:#111;
+	background: url(http://proxyioio.sinaapp.com/jianshubg) #111;
+	background-position:center;
+	background-size: cover;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-ms-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+	height: 100%;
+}
+
+.header-container {
+	text-align: center;
+}
+
+.nav nav {
+	margin: 1em;
+	background: rgba(85, 85, 85, 0.54);
+}
+
+.nav nav a {
+	color: #fff;
+}
+
+
+.post {
+	transition: all .3s ease-out;
+	padding: 6.087% 20px;
+	margin-bottom: 10px;
+	//background-color: #eee
+}
+
+.post h3 a {
+	font: "Microsoft Yahei",Sans-Serif;
+	color: #313131;
+}
+
+.read-more {
+	background-color: #eee;
+	color: #585858;
+	border-radius: 90px;
+	font-size: 0.8em;
+	padding: 11px 26px;
+	-webkit-transition: color .3s ease-out,background .3s ease-out,opacity .3s ease-out,border-color .3s ease-out;
+    -moz-transition: color .3s ease-out,background .3s ease-out,opacity .3s ease-out,border-color .3s ease-out;
+	transition: color .3s ease-out,background .3s ease-out,opacity .3s ease-out,border-color .3s ease-out;;
+}
+
+.read-more:hover {
+	background-color: #121212;
+	color: #fff;
+}
+
+.content {
+	position: absolute;
+	right: 0;
+	min-height: 100%;
+	background: whitesmoke;
+}
+
+.content-container, .post-detail{
+	background-color: #f5f4f2;
+	//background: transparent linear-gradient(136deg, #C2E987, #309E85) repeat scroll 0% 0%;
+}
+
+article {
+	border-bottom: 2px solid #ddd;
+	padding: 30px 0;
+	position: relative;
+}
+
+.article-detail,.comment-content {
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.article-detail h2,.comment-content h2 {
+	font-size: 1.28571em;
+}
+
+.article-detail video,.comment-content video {
+	max-width: 100%;
+	width: 100%
+}
+
+.article-detail a img,.comment-content a img {
+	background: #FFF;
+	position: relative;
+	bottom: -4px;
+}
+
+.article-detail hr,.comment-content hr {
+	margin: 2em auto;
+	width: 100px;
+	border: 1px solid #E9E9E9;
+	border-width: 2px 0 0 0;
+}
+
+.hidden {
+	display: none!important;
+	visibility: hidden;
+}
+
+.show {
+	display: block;
+	visibility: visible;
+}
+
+
+nav ul {
+	padding: 0px;
+	list-style-type: none;
+}
+
+.article-detail ul {
+	padding-left: 4em;
+}
+
+.post-date {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: rotate(-25deg);
+	opacity: .5;
+}
+::-webkit-scrollbar{width:3px;height:3px;-webkit-border-radius:3px;border-radius:3px;background-color:rgba(0,0,0,.15);-webkit-appearance:none;}
+::-webkit-scrollbar-thumb{-webkit-border-radius:3px;border-radius:3px;background-color:#11A664;}

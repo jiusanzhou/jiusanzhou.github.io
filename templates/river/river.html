@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no"/>
+<link href="css/river.css" rel="stylesheet" type="text/css" media="screen">
+<title>弱水三千，只取一瓢</title>
+<script>
+var whenReady = (function() {    //这个函数返回whenReady()函数
+    var funcs = [];             //当获得事件时，要运行的函数
+    var ready = false;          //当触发事件处理程序时,切换为true
+    
+    //当文档就绪时,调用事件处理程序
+    function handler(e) {
+        if(ready) return;       //确保事件处理程序只完整运行一次
+        
+        //如果发生onreadystatechange事件，但其状态不是complete的话,那么文档尚未准备好
+        if(e.type === 'onreadystatechange' && document.readyState !== 'complete') {
+            return;
+        }
+        
+        //运行所有注册函数
+        //注意每次都要计算funcs.length
+        //以防这些函数的调用可能会导致注册更多的函数
+        for(var i=0; i<funcs.length; i++) {
+            funcs[i].call(document);
+        }
+        //事件处理函数完整执行,切换ready状态, 并移除所有函数
+        ready = true;
+        funcs = null;
+    }
+    //为接收到的任何事件注册处理程序
+    if(document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', handler, false);
+        document.addEventListener('readystatechange', handler, false);            //IE9+
+        window.addEventListener('load', handler, false);
+    }else if(document.attachEvent) {
+        document.attachEvent('onreadystatechange', handler);
+        window.attachEvent('onload', handler);
+    }
+    //返回whenReady()函数
+    return function whenReady(fn) {
+        if(ready) { fn.call(document); }
+        else { funcs.push(fn); }
+    }
+
+})();
+whenReady(function() {
+    var header = document.querySelector('header')
+    var headerImg = document.querySelector('header img')
+    var h1 = document.querySelector('h1')
+    var address = document.querySelector('address')
+    if(headerImg && headerImg.getAttribute('src')) {
+        header.style.backgroundImage = 'url('+headerImg.getAttribute('src')+')'
+        headerImg.parentNode.removeChild(headerImg)
+        header.className='active'
+    }
+    header.appendChild(h1)
+    header.appendChild(address)
+    var end = document.createElement('div')
+    end.innerHTML = '完'
+    end.className="end"
+    document.body.appendChild(end)
+})
+</script>
+</head>
+<body>
+<header>
+	<img src="./images/bg.jpg" alt="">
+</header>
+<h1>弱水三千只取一瓢</h1>
+<address>
+	<img src="./images/headImg.png"/>
+	<h6>yhmnin 著</h6>
+	<time data-format="简M月d日">九月十二</time>
+</address>
+<h2>梦忆残殇 「一」</h2>
+<h3>第一章     兰亭碎梦</h3>
+<p>我穿越千年清冷的光，只为觅得你的踪迹。</p>
+<p>《兰亭序》行书第一遮蔽历代行书大家的心迹，徒以挥墨泼洒白纸之上，集草书的随心和楷书的美幻。王羲之，一代书圣，酒兴作此书令吾后辈赞叹无尽。当其真迹隐匿于尘世，临摹此起彼伏，真迹静静地收拢那耀眼光芒。岂料后人求字心切，以至碎梦于它，终不能一现。</p>
+<p>淡漠的过去，携卷千年书香墨影悄然而至，只将满腹经纶，挥墨纸上。</p>
+<h3>第二章     断章梦呓</h3>
+<blockquote>这是无言无语的温柔梦想</blockquote>
+<p>点滴、思量，岂能感知内心彷徨无措。</p>
+<p>听以前的歌，看以前的电影，对着以前人的字静静发呆，那一首首、一部部、一句句曾令我温馨多少岁月，如今，它们似乎已落满尘埃，沉默不语。</p>
+<p>我躑躅巴蜀圣地，仙家瑶台。浮华落尽，凄凄然，天空海阔。我穿梭人间，尽然不能窥得世人心迹，但知晓颇丰。</p>
+<p>灾难尽显世人温情，为何平时，却又都处心积虑呢？我叩问苍穹，没有回音，似乎声音迷失了方向。</p>
+<figure>
+    <img src="./images/p1.jpg" alt="">
+    <figcaption>拍摄于孟泰那山脉</figcaption>
+</figure>
+<h3>第三章     浮华落尽</h3>
+<p>当誓言成为谎言，当时间破碎，当曾经繁华尽然消逝，你，茕茕孑立，伫立在命运的路口，你回首，残忍挥别过去，那醉生梦死，那血泪欢语，那灿若星河的无边际黑暗。你企盼，思想在希冀的罅隙里游荡。静静地，寂寞的俳徊。</p>
+<p>阴郁的你连内心都蒙上灰色，你惨然一笑，对着那些人和事，你痛了……</p>
+<p>我想用现实令你清醒，可你似乎毫不领情，你仍然怀旧，怀念着那些令你至今滴血的伤。终于，你接受了所有的背叛和伤害，再也没有勇气去爱或恨一个人了……你无声泪如泉涌，你终于接近了清醒，你终于看到你眼角残存的泪…</p>
+<p>你似乎再不肯用爱去书写过去，你曾经的彷徨，现今的忧伤，奈徒然幻梦一场。</p>
+<p>玉碎，你听到晶莹的破碎之声，奈何梦忆残殇，展我懵懂向往。</p>
+<hr>
+<h2>梦忆残殇 「二」</h2>
+<h3>第四章      人世真情</h3>
+<p>曾于夕阳染红西方，酡红如醉之时，和着几位挚友嬉戏人世，依依不舍的是那短暂的时光啊！</p>
+<p>那童年的朋友啊，你们近况如何…</p>
+<figure>
+    <img src="./images/p2.jpg" alt="">
+    <figcaption>我曾在那个夏天，就这样的单纯联想</figcaption>
+</figure>
+<p>可怜我梦中梦着你们的时候却哭醒了，那无悔的青春曾见证多少温馨的过往，那醉人的往事曾挥洒多少不舍的真情，离别多年的儿时伙伴，你们是怎样度过这些年的，你们也像我回忆你们一样回忆我么？还是你被现实冗杂遮蔽心灵，无以静心…</p>
+<p>我双手合十，对着天际流星许下唯美心愿，希望你们一生平安。</p>
+<p>人世真情，令我深深回念。</p>
+<h3>第五章      乡愁扣心</h3>
+<p>浓云散尽，烟雨渐息，冬天的雨来得绵长，来的诗意…</p>
+<blockquote>生命是一首低吟浅唱的歌，努力着去到达到你梦中的彼岸!</blockquote>
+<ol>
+    <li>清冷的光摇曳在树叶间，路上的积水将落叶浸润，有种零乱的碎意，冬之精灵，今年早早来到世间，让我们在这寒冷的冬日觉得“温暖”一词的珍贵。</li>
+    <li>又几日未踏返乡之途，于是，一种绵长的愁绪便将时空交汇，让脑海中家乡浮现，一种温暖的感动悄然而至，在异地倍觉温馨。</li>
+    <li>冬影碎然而至，我看见那摇曳的枯枝落叶终于在风的最后抚摸下，悄然滑落。风见证叶的嫩绿和枯黄，见证它一生的慢慢成长。</li>
+</ol>
+<p>曾经，懵懂；曾经，忧伤。</p>
+<p>茕茕白兔，东走西顾；衣不如新，人不如故。</p>
+<hr>
+<h2>梦忆残殇 「三」</h2>
+<p>看蝶飞蝶舞，听虫鸣虫语，赏青松叠枝，叹心中独然落寞。</p>
+<p>心郁结，思绪如玻璃绳般缠绕。</p>
+<p>身疲倦，有限的心灵空间却承受岁月最深的负重。</p>
+<p>久久的追察似水易逝流年 ，久久的苦等白头苦然空悲切。</p>
+<ul>
+    <li>渐次落第的尘埃随风摆舞，混隐于青草间，浊荡自天际中。于是，久远的记忆伴随新生的伤飘飘荡荡的走近，一如眼前白羽的蝴蝶，翻游青草间。</li>
+    <li>想像着自己迷失在这个城市，在每个巴士底站感到前所未有的孤独，在每个异域内静静安放自己剩下鲜活的心，傻傻的当作什么都不知，于是最悲苦的境地里依然笑靥如花…</li>
+</ul>
+<p>只是那样纯白的想，该以怎样的梦延续自己的心…</p>
+</body>
+</html>

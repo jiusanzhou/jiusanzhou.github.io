@@ -1,0 +1,1 @@
+{{ content | remove : '\n' | remove : '\t' | remove : '\t\n' | replace : ',]', ']' }}
