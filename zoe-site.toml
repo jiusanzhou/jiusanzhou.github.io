@@ -1,0 +1,95 @@
+title = "Zoe"
+description = "Zoe 有关于他的一切"
+# this filed used by manifest plugin
+# which only supports:
+# - project root based relative path
+# - absolute path
+# - remote url
+# so, we must use absolute path at here
+# logo = "https://github.com/jiusanzhou.png"
+
+version = "beta"
+
+primaryColor = "green"
+
+zoePlugins = [
+  "src/plugins/repo-project",
+  "src/plugins/blog-post",
+]
+
+# assetPrefix(jsdelivr) can't works well with pathPrefix
+# assetPrefix = "https://cdn.jsdelivr.net/gh/jiusanzhou/gatsby-starter-zoe-app@gh-pages"
+
+baseContentDir = [
+  "${__dirname}/content"
+]
+
+[[navs]]
+title = "Projects"
+href = "/projects"
+
+[[navs]]
+title = "Blog"
+href = "/blogs"
+
+[[navs]]
+title = "About"
+href = "/about"
+
+[[links]]
+title = "Home"
+category = "About"
+href = "/"
+
+[[links]]
+title = "Blog"
+category = "About"
+href = "/blogs"
+
+[[links]]
+title = "About"
+category = "About"
+href = "/about"
+
+[[links]]
+title = "Projects"
+category = "Open Source"
+href = "/projects"
+
+[socials]
+email = "hi@zoe.im"
+github = "zoeim"
+twitter = "jiusanzhou"
+facebook = "jiusanzhou"
+telegram = "jiusanzhou"
+linkedin = "johnzoe"
+
+gtagTrackingIds = [
+    "G-5LM10G1ZPK"
+]
+
+[[projects]]
+provider = "github"
+tag = "zoe-lab"
+owners = [ "jiusanzhou" ]
+
+[comments]
+provider = "giscus"
+repo = "jiusanzhou/jiusanzhou.github.io"
+repoID = "MDEwOlJlcG9zaXRvcnkxMzQ2MDAzMDM="
+categoryID = "DIC_kwDOCAXWb84B-qn9"
+theme = "preferred_color_scheme"
+
+[gitContent]
+name = "me"
+remote = "https://github.com/jiusanzhou/me.git"
+local = "/tmp/repo-me"
+patterns = [ "📖posts/**" ]
+
+[[customNodes]]
+name = "MdxPost"
+
+  [customNodes.when]
+  sourceName = "me"
+  type = "Mdx"
+  path = "📖posts"
