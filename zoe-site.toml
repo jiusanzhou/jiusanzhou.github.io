@@ -1,5 +1,5 @@
 title = "Zoe"
-description = "Zoe 有关于他的一切"
+description = "我将成为我的墓志铭"
 # this filed used by manifest plugin
 # which only supports:
 # - project root based relative path
@@ -7,6 +7,7 @@ description = "Zoe 有关于他的一切"
 # - remote url
 # so, we must use absolute path at here
 # logo = "https://github.com/jiusanzhou.png"
+logo = "${__dirname}/images/avatar-v0.jpeg"
 
 version = "beta"
 
