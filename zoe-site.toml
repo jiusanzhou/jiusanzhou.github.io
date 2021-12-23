@@ -7,7 +7,7 @@ description = "我将成为我的墓志铭"
 # - remote url
 # so, we must use absolute path at here
 # logo = "https://github.com/jiusanzhou.png"
-logo = "${__dirname}/images/avatar-v0.jpeg"
+logo = "${__dirname}/images/avatar-v1.png"
 
 version = "beta"
 
@@ -26,35 +26,35 @@ baseContentDir = [
 ]
 
 [[navs]]
-title = "Projects"
+title = "实验项目"
 href = "/projects"
 
 [[navs]]
-title = "Blog"
+title = "博客"
 href = "/blogs"
 
 [[navs]]
-title = "About"
+title = "关于"
 href = "/about"
 
 [[links]]
-title = "Home"
-category = "About"
+title = "主页"
+category = "站点"
 href = "/"
 
 [[links]]
-title = "Blog"
-category = "About"
+title = "博客"
+category = "站点"
 href = "/blogs"
 
 [[links]]
-title = "About"
-category = "About"
+title = "关于"
+category = "站点"
 href = "/about"
 
 [[links]]
-title = "Projects"
-category = "Open Source"
+title = "实验项目"
+category = "开源"
 href = "/projects"
 
 [socials]
