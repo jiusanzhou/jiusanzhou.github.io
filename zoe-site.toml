@@ -53,9 +53,14 @@ category = "站点"
 href = "/about"
 
 [[links]]
-title = "实验项目"
-category = "开源"
+title = "项目"
+category = "实验"
 href = "/projects"
+
+[[links]]
+title = "RSS订阅"
+category = "实验"
+href = "/rss.xml"
 
 [socials]
 email = "hi@zoe.im"
