@@ -11,7 +11,7 @@ logo = "${__dirname}/images/avatar-v1.png"
 
 version = "beta"
 
-primaryColor = "green"
+primaryColor = "gray"
 
 zoePlugins = [
   "src/plugins/repo-project",
