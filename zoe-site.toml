@@ -13,6 +13,8 @@ version = "beta"
 
 primaryColor = "gray"
 
+dateFormat = "YYYY-MM-DD"
+
 zoePlugins = [
   "src/plugins/repo-project",
   "src/plugins/blog-post",
