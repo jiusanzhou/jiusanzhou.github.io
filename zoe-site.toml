@@ -20,6 +20,10 @@ zoePlugins = [
   "src/plugins/blog-post",
 ]
 
+gtagTrackingIds = [
+    "G-5LM10G1ZPK"
+]
+
 # assetPrefix(jsdelivr) can't works well with pathPrefix
 # assetPrefix = "https://cdn.jsdelivr.net/gh/jiusanzhou/gatsby-starter-zoe-app@gh-pages"
 
@@ -71,10 +75,6 @@ twitter = "jiusanzhou"
 facebook = "jiusanzhou"
 telegram = "jiusanzhou"
 linkedin = "johnzoe"
-
-gtagTrackingIds = [
-    "G-5LM10G1ZPK"
-]
 
 [[projects]]
 provider = "github"
