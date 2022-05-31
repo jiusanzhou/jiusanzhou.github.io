@@ -1,35 +1,25 @@
 title = "Zoe"
 description = "我将成为我的墓志铭"
-# this filed used by manifest plugin
-# which only supports:
-# - project root based relative path
-# - absolute path
-# - remote url
-# so, we must use absolute path at here
-# logo = "https://github.com/jiusanzhou.png"
 logo = "${__dirname}/images/avatar-v2.jpg"
-
 version = "beta"
-
 primaryColor = "gray"
-
 dateFormat = "YYYY-MM-DD"
+zoePlugins = [ "src/plugins/repo-project", "src/plugins/blog-post" ]
+gtagTrackingIds = [ "G-5LM10G1ZPK" ]
+baseContentDir = [ "${__dirname}/content" ]
 
-zoePlugins = [
-  "src/plugins/repo-project",
-  "src/plugins/blog-post",
-]
-
-gtagTrackingIds = [
-    "G-5LM10G1ZPK"
-]
-
-# assetPrefix(jsdelivr) can't works well with pathPrefix
-# assetPrefix = "https://cdn.jsdelivr.net/gh/jiusanzhou/gatsby-starter-zoe-app@gh-pages"
-
-baseContentDir = [
-  "${__dirname}/content"
-]
+[author]
+name = "Zoe"
+email = "hi@zoe.im"
+homepage = "https://zoe.im"
+avatar = "https://github.com/jiusanzhou.png"
+minibio = "知行合一，不将有限的生命献给无知、平庸和低俗。 "
+github = "zoeim"
+twitter = "jiusanzhou"
+facebook = "jiusanzhou"
+telegram = "jiusanzhou"
+linkedin = "johnzoe"
+wechat = "https://cdn.jsdelivr.net/gh/jiusanzhou/jiusanzhou.github.io@archived/static/WeChat-JohnCx.jpeg"
 
 [[navs]]
 title = "实验项目"
