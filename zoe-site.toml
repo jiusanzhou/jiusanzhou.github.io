@@ -13,9 +13,15 @@ version = "beta"
 
 primaryColor = "gray"
 
+dateFormat = "YYYY-MM-DD"
+
 zoePlugins = [
   "src/plugins/repo-project",
   "src/plugins/blog-post",
+]
+
+gtagTrackingIds = [
+    "G-5LM10G1ZPK"
 ]
 
 # assetPrefix(jsdelivr) can't works well with pathPrefix
@@ -69,10 +75,6 @@ twitter = "jiusanzhou"
 facebook = "jiusanzhou"
 telegram = "jiusanzhou"
 linkedin = "johnzoe"
-
-gtagTrackingIds = [
-    "G-5LM10G1ZPK"
-]
 
 [[projects]]
 provider = "github"
