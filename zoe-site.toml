@@ -30,6 +30,10 @@ title = "博客"
 href = "/blogs"
 
 [[navs]]
+title = "☕赏杯咖啡"
+href = "https://payone.wencai.app/s/zoe"
+
+[[navs]]
 title = "关于"
 href = "/about"
 
