@@ -1,0 +1,196 @@
+# Zoe Site Configuration
+
+title: Zoe
+description: 全栈开发 · AI 工具制造者 · 用代码和 AI 搭建被动收入系统
+url: https://zoe.im
+logo: /images/avatar-v2.jpg
+lang: zh-CN
+
+# 作者信息
+author:
+  name: Zoe
+  email: hi@zoe.im
+  homepage: https://zoe.im
+  avatar: https://github.com/jiusanzhou.png
+  minibio: 全栈开发 · AI 工具制造者 · Go / Flutter / Rust · 开源偏执狂
+  github: jiusanzhou
+  twitter: jiusanzhou
+  telegram: noboddyim
+  linkedin: johnzoe
+  wechat: https://cdn.jsdelivr.net/gh/jiusanzhou/jiusanzhou.github.io@archived/static/WeChat-JohnCx.jpeg
+
+# 组织信息
+organization:
+  name: Zoe
+  url: https://zoe.im
+
+# 版权信息
+copyright:
+  from: 2011
+  holder: Zoe
+  location: Hangzhou
+
+# 主题风格
+theme: default
+
+# 导航菜单
+navs:
+  - title: 首页
+    href: /
+  - title: 博客
+    href: /blog
+  - title: 项目
+    href: /projects
+  - title: 关于
+    href: /about
+
+# 社交链接
+socials:
+  github: https://github.com/jiusanzhou
+  twitter: https://twitter.com/jiusanzhou
+  telegram: https://t.me/noboddyim
+
+# 页脚链接
+links:
+  - title: 首页
+    category: 导航
+    href: /
+  - title: 博客
+    category: 导航
+    href: /blog
+  - title: 项目
+    category: 导航
+    href: /projects
+  - title: 关于
+    category: 导航
+    href: /about
+  - title: GitHub
+    category: 开源
+    href: https://github.com/jiusanzhou
+  - title: distro
+    category: 开源
+    href: https://github.com/jiusanzhou/distro
+  - title: RSS
+    category: 订阅
+    href: /rss.xml
+
+# 博客配置
+blog:
+  title: 博客
+  description: 写代码、造工具、记录过程
+  basePath: /blog
+  postsPerPage: 10
+
+# 内容目录
+contentDirs:
+  - content
+
+# 自定义节点类型
+contentTypes:
+  - name: post
+    path: posts
+    template: post
+  - name: page
+    path: pages
+    template: page
+
+# GitHub 项目
+projects:
+  provider: github
+  tag: zoe-lab
+  owners:
+    - jiusanzhou
+
+# RSS
+rss:
+  enabled: true
+  path: /rss.xml
+  title: Zoe's Blog
+
+# 评论
+comments:
+  provider: giscus
+  repo: jiusanzhou/jiusanzhou.github.io
+  repoId: MDEwOlJlcG9zaXRvcnkxMzQ2MDAzMDM=
+  categoryId: DIC_kwDOCAXWb84B-qn9
+
+# 首页 Hero
+hero:
+  greeting: '👋 Hey，我是 Zoe'
+  typingTexts:
+    - 造 AI 工具
+    - 写开源项目
+    - 搭被动收入系统
+    - 全程公开记录
+  description: '全栈开发 · Go / Flutter / Rust · 用代码和 AI 搭建可持续的收入系统'
+  cta:
+    - text: 读博客
+      href: /blog
+    - text: GitHub
+      href: https://github.com/jiusanzhou
+
+# 首页板块
+sections:
+  - title: 在做什么
+    description: 当前聚焦的方向
+    items:
+      - icon: '🛠'
+        title: AI 开发工具
+        description: 多 Agent 系统、内容分发 CLI、手机端 AI Agent。解决自己的问题，然后开源。
+      - icon: '✍️'
+        title: 技术写作
+        description: AI + 开发者工具方向。中文写原稿，工具自动分发到各平台。
+      - icon: '💰'
+        title: 被动收入实验
+        description: 从零开始搭建被动收入系统，每月公开数据报告。
+
+# 中文标签
+labels:
+  blog: 博客
+  blog.archives: 归档
+  blog.tags: 标签
+  blog.drafts: 草稿
+  blog.drafts.description: 这些文章未发布，仅在开发模式下可见
+  blog.drafts.empty: 暂无草稿
+  blog.drafts.badge: 草稿
+  blog.back: 返回博客
+  blog.readMore: 阅读更多
+  blog.viewMore: 查看更多
+  blog.noTags: 暂无标签
+  blog.noPosts: 暂无文章
+  blog.browseTags: 按标签浏览文章
+  blog.minRead: 分钟阅读
+  blog.comments: 评论
+  blog.postNotFound: 文章未找到
+  projects: 项目
+  projects.description: 我的开源项目和作品集
+  help: 帮助中心
+  loading: 加载中...
+  notFound.title: 页面走丢了
+  notFound.description: 抱歉，您访问的页面不存在或已被移除。
+  notFound.hint: 可能是链接过期了，或者您输入了错误的地址。
+  notFound.home: 返回首页
+  notFound.blog: 浏览博客
+  notFound.issueHint: 如果你认为这是一个 Bug，请
+  notFound.issueLink: 提交 Issue
+  notFound.issueEnd: 告诉我们。
+  contact: 联系我
+  contact.description: 任何一种方式都可以 👇
+  home.projects: 开源项目
+  home.projects.description: 造轮子是最好的学习方式
+  home.latestPosts: 最新文章
+  home.latestPosts.description: 写代码、造工具、记录过程
+  error.title: 出错了
+  error.description: 发生了意外错误，请重试。
+  error.retry: 重试
+  error.home: 返回首页
+  releases: 下载
+  releases.description: 下载最新版本
+  changelog: 更新日志
+  changelog.description: 查看版本历史
+  pricing: 定价
+  pricing.description: 选择适合你的方案
+
+# Analytics
+analytics:
+  googleId: G-5LM10G1ZPK

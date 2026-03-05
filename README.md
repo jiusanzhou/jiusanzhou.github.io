@@ -1,6 +1,13 @@
-## Zoe 的主页
+# zoe.im
 
-这里是[Zoe的主页](https://zoe.im)的站点托管。
+Zoe 的个人主页，托管在 [zoe.im](https://zoe.im)。
 
-该站点是通过[`gatsby-starter-zoe-app`](https://github.com/jiusanzhou/gatsby-starter-zoe-app)来生成，一些静态的内容是在这里维护，如[/content](/content)下；大多数内容都是，通过编辑工具保存在私有仓库，所以在这里并不能看到原始文件。
+使用 [nextjs-starter-zoe-app](https://github.com/jiusanzhou/nextjs-starter-zoe-app) 作为主题引擎，通过 GitHub Actions 自动构建部署到 GitHub Pages。
 
+## 结构
+
+- `zoe-site.yaml` — 站点配置（标题、导航、Hero、标签等）
+- `content/posts/` — 博客文章（Markdown）
+- `content/pages/` — 独立页面
+- `public/images/` — 静态资源
+- `.github/workflows/deploy.yml` — CI/CD 部署流程

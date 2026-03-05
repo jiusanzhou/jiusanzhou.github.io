@@ -1,11 +1,4 @@
-_site
+node_modules/
+.next/
+out/
 .DS_Store
-.jekyll
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
-node_modules
-package.json
-.env
-.env.*
