@@ -194,3 +194,11 @@ labels:
 # Analytics
 analytics:
   googleId: G-5LM10G1ZPK
+
+# 从 me 仓库同步博客内容
+gitContent:
+  - name: me
+    remote: https://github.com/jiusanzhou/me.git
+    branch: main
+    patterns:
+      - "📖posts/**"

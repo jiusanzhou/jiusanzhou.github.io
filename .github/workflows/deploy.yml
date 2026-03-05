@@ -56,6 +56,22 @@ jobs:
         working-directory: theme
         run: pnpm install --frozen-lockfile
 
+      - name: Sync git content (me repo)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone --depth 1 https://github.com/jiusanzhou/me.git /tmp/repo-me
+          # Copy blog posts from me repo (📖posts/) into site content
+          mkdir -p site/content/posts
+          find /tmp/repo-me/📖posts -name '*.md' -o -name '*.mdx' | while read f; do
+            cp "$f" site/content/posts/
+          done
+          # Also copy from subdirectories
+          find /tmp/repo-me/📖posts -mindepth 2 -name '*.md' -o -name '*.mdx' | while read f; do
+            cp "$f" site/content/posts/
+          done
+          echo "Synced $(ls site/content/posts/ | wc -l) posts from me repo"
+
       - name: Link site content to theme
         run: |
           # Copy site config
