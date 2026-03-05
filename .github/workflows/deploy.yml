@@ -60,7 +60,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone --depth 1 https://github.com/jiusanzhou/me.git /tmp/repo-me
+          git clone --depth 1 https://x-access-token:${{ secrets.ME_REPO_TOKEN }}@github.com/jiusanzhou/me.git /tmp/repo-me
           # Copy blog posts from me repo (📖posts/) into site content
           mkdir -p site/content/posts
           find /tmp/repo-me/📖posts -name '*.md' -o -name '*.mdx' | while read f; do
