@@ -3,6 +3,7 @@ title: "我搭了一套多 Agent 系统管理日常开发，聊聊架构"
 date: 2026-03-01
 tags: [ai-agent, automation, architecture, llm, productivity]
 platforms: [twitter, juejin, zhihu, xiaohongshu, blog-en]
+published: true
 ---
 
 # 我搭了一套多 Agent 系统管理日常开发，聊聊架构

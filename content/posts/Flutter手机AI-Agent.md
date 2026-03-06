@@ -3,6 +3,7 @@ title: "用 Flutter 做一个能控制手机的 AI Agent"
 date: 2026-03-01
 tags: [flutter, ai-agent, mobile, llm, automation]
 platforms: [juejin, zhihu, blog-en]
+published: true
 ---
 
 # 用 Flutter 做一个能控制手机的 AI Agent
