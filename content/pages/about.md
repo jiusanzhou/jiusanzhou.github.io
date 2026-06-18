@@ -7,7 +7,7 @@ slug: about
 
 我是 Zoe，AI Infra Engineer，坐标杭州。
 
-写代码 10 年。Go / Python / Flutter / Rust 都写。前半段做分布式系统、容器调度、GPU 集群；这两年全栈转向 AI 推理，目前在快手负责**万擎推理服务平台**。
+写代码 10 年。Go / Python / Flutter / Rust 都写。前半段做分布式系统、容器调度、GPU 集群；这两年全栈转向 AI 推理，目前在一家大型互联网公司负责自研推理服务平台。
 
 ## 现在的主线
 

@@ -43,6 +43,8 @@ navs:
     href: /projects
   - title: 关于
     href: /about
+  - title: ☕ 赏杯咖啡
+    href: https://payone.wencai.app/s/zoe
 
 # 社交链接
 socials:
@@ -131,12 +133,20 @@ hero:
 
 # 首页板块
 sections:
+  - type: quote
+    quote: 任何业务逻辑都应向「无码平台」演进。
+    cite: Zoe · 长期信仰
+    link:
+      text: wuma.dev
+      href: https://wuma.dev
+    align: center
+
   - title: 在做什么
     description: 当前聚焦的方向
     items:
       - icon: '🚀'
         title: AI Infra & LLM Serving
-        description: 在快手负责万擎推理平台。vLLM / SGLang / GPU 集群调度 / RDMA / PD 分离。每天跟大模型推理打交道。
+        description: 在大型互联网公司负责自研推理平台。vLLM / SGLang / GPU 集群调度 / RDMA / PD 分离。每天跟大模型推理打交道。
       - icon: '🛠'
         title: AI Ops 工具
         description: 多 Agent 系统、内容分发 CLI、手机端 AI Agent。解决自己的问题，然后开源。
