@@ -1,7 +1,7 @@
 # Zoe Site Configuration
 
 title: Zoe
-description: 全栈开发 · AI 工具制造者 · 用代码和 AI 搭建被动收入系统
+description: AI Infra Engineer · LLM Serving / GPU 集群 / 推理优化 · 造 AI Ops 工具搭被动收入
 url: https://zoe.im
 logo: /images/avatar-v2.jpg
 lang: zh-CN
@@ -12,7 +12,7 @@ author:
   email: hi@zoe.im
   homepage: https://zoe.im
   avatar: https://github.com/jiusanzhou.png
-  minibio: 全栈开发 · AI 工具制造者 · Go / Flutter / Rust · 开源偏执狂
+  minibio: AI Infra Engineer · LLM Serving · GPU/RDMA · 造工具的偏执狂
   github: jiusanzhou
   twitter: jiusanzhou
   telegram: noboddyim
@@ -118,11 +118,11 @@ comments:
 hero:
   greeting: '👋 Hey，我是 Zoe'
   typingTexts:
-    - 造 AI 工具
-    - 写开源项目
+    - 搞 LLM 推理
+    - 造 AI Ops 工具
+    - 调 GPU 集群
     - 搭被动收入系统
-    - 全程公开记录
-  description: '全栈开发 · Go / Flutter / Rust · 用代码和 AI 搭建可持续的收入系统'
+  description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · 用代码和 AI 搭建可持续的收入系统'
   cta:
     - text: 读博客
       href: /blog
@@ -134,12 +134,12 @@ sections:
   - title: 在做什么
     description: 当前聚焦的方向
     items:
+      - icon: '🚀'
+        title: AI Infra & LLM Serving
+        description: 在快手负责万擎推理平台。vLLM / SGLang / GPU 集群调度 / RDMA / PD 分离。每天跟大模型推理打交道。
       - icon: '🛠'
-        title: AI 开发工具
+        title: AI Ops 工具
         description: 多 Agent 系统、内容分发 CLI、手机端 AI Agent。解决自己的问题，然后开源。
-      - icon: '✍️'
-        title: 技术写作
-        description: AI + 开发者工具方向。中文写原稿，工具自动分发到各平台。
       - icon: '💰'
         title: 被动收入实验
         description: 从零开始搭建被动收入系统，每月公开数据报告。
