@@ -72,6 +72,13 @@ jobs:
           done
           echo "Synced $(ls site/content/posts/ | wc -l) posts from me repo"
 
+          # Copy static assets from me repo (banners, images, etc.)
+          if [ -d /tmp/repo-me/static ]; then
+            mkdir -p site/public
+            cp -r /tmp/repo-me/static/* site/public/ 2>/dev/null || true
+            echo "Synced static assets from me repo"
+          fi
+
       - name: Link site content to theme
         run: |
           # Copy site config
