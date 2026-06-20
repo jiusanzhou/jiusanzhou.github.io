@@ -39,10 +39,15 @@
     width: 76px; height: 76px;
     border-radius: 50%;
     background: linear-gradient(135deg, #06b6d4, #6366f1);
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 36px; font-weight: 700; letter-spacing: -1px;
+    padding: 3px;
     box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
-    border: 3px solid white;
+  }
+  .avatar img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid white;
   }
   .brand-name { font-size: 30px; font-weight: 700; color: #0f172a; letter-spacing: -0.5px; }
   .brand-domain { font-size: 16px; color: #64748b; font-family: 'SF Mono', ui-monospace, monospace; margin-top: 2px; }
@@ -91,7 +96,7 @@
 <div class="card">
   <div class="top">
     <div class="brand">
-      <div class="avatar" data-bind="brand.initial">Z</div>
+      <div class="avatar" data-bind="brand.initial"><img src="avatar.jpg" alt="Zoe"></div>
       <div>
         <div class="brand-name" data-bind="brand.name">Zoe</div>
         <div class="brand-domain" data-bind="brand.domain">zoe.im</div>

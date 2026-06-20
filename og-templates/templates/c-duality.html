@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
+<title>OG · Template C · Duality</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body {
@@ -14,42 +15,121 @@
   .card {
     position: relative;
     width: 1200px; height: 630px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* LEFT: light side (day job) */
+  /* === HEADER: identity strip === */
+  .header {
+    height: 168px;
+    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+    border-bottom: 1px solid rgba(15,23,42,0.08);
+    display: flex; align-items: center;
+    padding: 0 64px;
+    gap: 28px;
+    position: relative;
+    z-index: 3;
+  }
+  .header::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+  .avatar {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #ec4899 100%);
+    padding: 3px;
+    box-shadow:
+      0 0 0 5px white,
+      0 0 0 6px rgba(15,23,42,0.08),
+      0 12px 32px rgba(15,23,42,0.18);
+    flex-shrink: 0;
+    position: relative; z-index: 2;
+  }
+  .avatar img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .id-block {
+    flex: 1;
+    position: relative; z-index: 2;
+  }
+  .name-row {
+    display: flex; align-items: baseline; gap: 14px;
+    margin-bottom: 6px;
+  }
+  .name {
+    font-size: 56px; font-weight: 800;
+    color: #0f172a; letter-spacing: -2px;
+    line-height: 1;
+  }
+  .url {
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-size: 18px;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+  .tagline {
+    font-size: 19px;
+    color: #475569;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+  }
+  .tagline .sep { color: #cbd5e1; margin: 0 10px; }
+  .tagline .accent {
+    color: #0f172a;
+    font-weight: 700;
+  }
+  .header-badge {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 14px;
+    background: rgba(16,185,129,0.08);
+    border: 1px solid rgba(16,185,129,0.2);
+    border-radius: 999px;
+    font-size: 13px;
+    color: #047857;
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-weight: 600;
+    flex-shrink: 0;
+    position: relative; z-index: 2;
+  }
+  .header-badge .pulse {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+  }
+
+  /* === DUALITY BODY === */
+  .body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
   .left {
     background:
       radial-gradient(circle at 30% 70%, rgba(6,182,212,0.10), transparent 60%),
       linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-    padding: 80px 60px 80px 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 36px 50px 40px 64px;
+    display: flex; flex-direction: column;
     color: #0f172a;
     position: relative;
   }
-  .left::after {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-  }
-
-  /* RIGHT: dark side (night build) */
   .right {
     background:
-      radial-gradient(circle at 70% 30%, rgba(236,72,153,0.18), transparent 55%),
-      radial-gradient(circle at 80% 80%, rgba(99,102,241,0.15), transparent 50%),
+      radial-gradient(circle at 70% 30%, rgba(236,72,153,0.16), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(99,102,241,0.14), transparent 50%),
       #0a0a0f;
-    padding: 80px 80px 80px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 36px 64px 40px 50px;
+    display: flex; flex-direction: column;
     color: #f8fafc;
     position: relative;
   }
@@ -58,33 +138,34 @@
     position: absolute; inset: 0;
     background-image:
       radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-size: 22px 22px;
     pointer-events: none;
   }
 
   .side-tag {
     font-family: 'SF Mono', ui-monospace, monospace;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
     position: relative; z-index: 2;
   }
   .left .side-tag { color: #06b6d4; }
   .right .side-tag { color: #ec4899; }
   .side-tag .icon {
     display: inline-block;
-    width: 24px; height: 1px;
+    width: 20px; height: 1px;
     background: currentColor;
   }
 
   .side-title {
-    font-size: 64px;
+    font-size: 52px;
     font-weight: 800;
-    line-height: 1.0;
+    line-height: 1.05;
     letter-spacing: -2px;
-    margin-top: 28px;
     position: relative; z-index: 2;
+    margin-bottom: 18px;
   }
   .left .side-title .em {
     background: linear-gradient(135deg, #06b6d4, #6366f1);
@@ -98,13 +179,13 @@
   }
 
   .side-list {
-    margin-top: 32px;
-    display: flex; flex-direction: column; gap: 14px;
-    font-size: 18px;
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: 16px;
     position: relative; z-index: 2;
+    flex: 1;
   }
   .side-list .item {
-    display: flex; align-items: center; gap: 12px;
+    display: flex; align-items: center; gap: 10px;
     font-family: 'SF Mono', ui-monospace, monospace;
   }
   .left .side-list .item { color: #475569; }
@@ -118,101 +199,89 @@
 
   .side-foot {
     font-family: 'SF Mono', ui-monospace, monospace;
-    font-size: 13px;
+    font-size: 12px;
     position: relative; z-index: 2;
+    margin-top: 14px;
   }
   .left .side-foot { color: #94a3b8; }
   .right .side-foot { color: #64748b; }
 
-  /* CENTER: divider with avatar */
-  .center {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .avatar {
-    width: 130px; height: 130px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #ec4899 100%);
-    display: flex; align-items: center; justify-content: center;
-    color: white;
-    font-size: 56px; font-weight: 800;
-    letter-spacing: -2px;
-    box-shadow:
-      0 0 0 8px rgba(255,255,255,0.95),
-      0 0 0 9px rgba(15,23,42,0.1),
-      0 24px 48px rgba(15,23,42,0.25);
-  }
-  .name {
-    margin-top: 18px;
-    padding: 8px 22px;
-    background: white;
-    border-radius: 999px;
-    box-shadow: 0 8px 24px rgba(15,23,42,0.18);
-    font-size: 18px;
-    font-weight: 700;
-    color: #0f172a;
-    letter-spacing: -0.3px;
-  }
-  .name .url {
-    color: #94a3b8;
-    font-family: 'SF Mono', ui-monospace, monospace;
-    font-weight: 500;
-    margin-left: 8px;
-    font-size: 14px;
-  }
-
+  /* divider */
   .divider {
     position: absolute;
     left: 50%; top: 0;
     width: 1px; height: 100%;
     background: linear-gradient(180deg,
-      transparent 0%,
-      rgba(15,23,42,0.15) 20%,
-      rgba(15,23,42,0.15) 35%,
+      rgba(15,23,42,0.12) 0%,
       transparent 45%,
-      transparent 55%,
-      rgba(255,255,255,0.15) 65%,
-      rgba(255,255,255,0.15) 80%,
-      transparent 100%);
+      rgba(255,255,255,0.12) 100%);
     z-index: 1;
+  }
+
+  /* center "&" badge straddling the divider */
+  .amp {
+    position: absolute;
+    left: 50%; top: 30px;
+    transform: translateX(-50%);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4 0%, #ec4899 100%);
+    color: white;
+    font-size: 22px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.25), 0 0 0 4px rgba(255,255,255,0.95);
+    z-index: 4;
+    font-style: italic;
   }
 </style>
 </head>
 <body>
 <div class="card">
-  <div class="left">
-    <div class="side-tag"><span class="icon"></span> DAY · 09:00 — 21:00</div>
-    <div>
-      <div class="side-title">调 <span class="em">GPU<br>集群</span></div>
-      <div class="side-list">
-        <div class="item">LLM Serving</div>
-        <div class="item">vLLM / SGLang</div>
-        <div class="item">RDMA / PD 分离</div>
+  <div class="header">
+    <div class="avatar"><img src="avatar.jpg" alt="Zoe"></div>
+    <div class="id-block">
+      <div class="name-row">
+        <div class="name">Zoe</div>
+        <div class="url">zoe.im</div>
+      </div>
+      <div class="tagline">
+        <span class="accent">AI Infra Engineer</span>
+        <span class="sep">·</span> LLM Serving
+        <span class="sep">·</span> GPU / RDMA
+        <span class="sep">·</span> Indie Hacker
       </div>
     </div>
-    <div class="side-foot">// AI Infra Engineer @ 某大厂</div>
-  </div>
-
-  <div class="right">
-    <div class="side-tag"><span class="icon"></span> NIGHT · 22:00 — ?</div>
-    <div>
-      <div class="side-title">造 <span class="em">被动<br>收入</span></div>
-      <div class="side-list">
-        <div class="item">zshare · motion</div>
-        <div class="item">flutter_floatwing</div>
-        <div class="item">wuma.dev (next)</div>
-      </div>
+    <div class="header-badge">
+      <div class="pulse"></div>
+      <span>SHIPPING</span>
     </div>
-    <div class="side-foot">// Indie Hacker · shipping</div>
   </div>
 
-  <div class="divider"></div>
-  <div class="center">
-    <div class="avatar">Z</div>
-    <div class="name">Zoe<span class="url">zoe.im</span></div>
+  <div class="body">
+    <div class="divider"></div>
+    <div class="amp">&amp;</div>
+
+    <div class="left">
+      <div class="side-tag"><span class="icon"></span> DAY · 09:00 — 21:00</div>
+      <div class="side-title">调 <span class="em">GPU 集群</span></div>
+      <div class="side-list">
+        <div class="item">LLM Serving · vLLM / SGLang</div>
+        <div class="item">GPU 调度 · RDMA · PD 分离</div>
+        <div class="item">推理性能优化</div>
+      </div>
+      <div class="side-foot">// AI Infra Engineer</div>
+    </div>
+
+    <div class="right">
+      <div class="side-tag"><span class="icon"></span> NIGHT · 22:00 — ?</div>
+      <div class="side-title">造 <span class="em">被动收入</span></div>
+      <div class="side-list">
+        <div class="item">zshare · motion · flutter_floatwing</div>
+        <div class="item">wuma.dev (coming soon)</div>
+        <div class="item">用代码搭可持续收入系统</div>
+      </div>
+      <div class="side-foot">// Indie Hacker · shipping</div>
+    </div>
   </div>
 </div>
 </body>
