@@ -40,6 +40,8 @@ navs:
     href: /
   - title: 博客
     href: /blog
+  - title: 产品
+    href: /products
   - title: 项目
     href: /projects
   - title: 关于
@@ -103,6 +105,69 @@ projects:
   tag: zoe-lab
   owners:
     - jiusanzhou
+
+# 独立产品列表（区别于 GitHub repos）
+# 每个产品默认复用其 Next.js opengraph-image 作为封面
+products:
+  - slug: motion
+    name: Motion
+    tagline: AI 友好的开源知识库编辑器，纯前端，数据存自己的 GitHub
+    url: https://motion.wencai.app
+    image: https://motion.wencai.app/opengraph-image
+    repo: https://github.com/jiusanzhou/motion
+    status: live
+    category: OSS
+    launchedAt: '2026-03'
+    tags: [Next.js, Markdown, GitHub]
+    featured: true
+
+  - slug: aeo
+    name: AEO
+    tagline: 让 AI 主动推荐你的企业 — 帮你被 DeepSeek / 豆包 / 通义 / Kimi 点名
+    url: https://aeo.wencai.app
+    image: https://aeo.wencai.app/og.png
+    status: live
+    category: SaaS
+    launchedAt: '2026'
+    tags: [AI, SEO, Brand]
+    featured: true
+
+  - slug: tools
+    name: AI Tools Directory
+    tagline: 精选 AI 工具导航 — 涵盖创作 / 开发 / 效率 / 学习等场景
+    url: https://tools.wencai.app
+    image: https://tools.wencai.app/opengraph-image
+    status: live
+    category: Site
+    launchedAt: '2026-04'
+    tags: [Next.js, Neon, Directory]
+
+  - slug: payone
+    name: PayOne
+    tagline: 多合一收款码 — 一张图聚合微信 / 支付宝 / QQ / 云闪付
+    url: https://payone.wencai.app
+    status: live
+    category: Tool
+    launchedAt: '2024'
+    tags: [Tool, QR]
+
+  - slug: 1hour-guide
+    name: 1 Hour Guide
+    tagline: Learn anything in 1 hour — hands-on tutorials, no fluff
+    url: https://1hour.guide
+    status: live
+    category: Site
+    launchedAt: '2026'
+    tags: [Learning, Guide]
+
+  - slug: wuma
+    name: wuma.dev
+    tagline: 「无码」实验室 — AI 落地页 / 营销页生成器（构建中）
+    url: https://wuma.dev
+    status: building
+    category: SaaS
+    launchedAt: '2026'
+    tags: [AI, No-Code]
 
 # RSS
 rss:
@@ -175,6 +240,11 @@ labels:
   blog.postNotFound: 文章未找到
   projects: 项目
   projects.description: 我的开源项目和作品集
+  products: 产品
+  products.description: 我做的独立产品 — 上线 / 在做 / 想做
+  products.viewMore: 查看更多
+  products.noProducts: 暂无产品
+  products.count: '{count} 个产品'
   help: 帮助中心
   loading: 加载中...
   notFound.title: 页面走丢了
@@ -189,6 +259,8 @@ labels:
   contact.description: 任何一种方式都可以 👇
   home.projects: 开源项目
   home.projects.description: 造轮子是最好的学习方式
+  home.products: 独立产品
+  home.products.description: 上线的、在做的、想做的
   home.latestPosts: 最新文章
   home.latestPosts.description: 写代码、造工具、记录过程
   error.title: 出错了
