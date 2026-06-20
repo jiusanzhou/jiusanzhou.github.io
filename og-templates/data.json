@@ -1,0 +1,46 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "OG image data — 改这里就行，跑 scripts/render.sh 出图",
+  "brand": {
+    "initial": "Z",
+    "name": "Zoe",
+    "domain": "zoe.im",
+    "github": "github.com/jiusanzhou",
+    "location": "Hangzhou",
+    "since": 2011
+  },
+  "headline": {
+    "greeting": "👋 Hey, 我是 Zoe ——",
+    "lineA": "调",
+    "accentA": "GPU 集群",
+    "lineB": "造被动收入"
+  },
+  "tags": [
+    { "label": "AI Infra Engineer", "primary": true },
+    { "label": "LLM Serving" },
+    { "label": "GPU / RDMA" },
+    { "label": "Indie Hacker" }
+  ],
+  "quote": "任何业务逻辑都应向「无码平台」演进。",
+  "status": "shipping · Hangzhou",
+  "techStack": ["LLM Serving", "GPU Cluster", "RDMA"],
+  "subtitle": "用代码和 AI 搭建可持续的收入系统 — shipping passive income, one repo at a time.",
+  "duo": {
+    "left": {
+      "label": "DAY · 09:00 — 21:00",
+      "title": "调",
+      "accent": "GPU\n集群",
+      "items": ["LLM Serving", "vLLM / SGLang", "RDMA / PD 分离"],
+      "footnote": "// AI Infra Engineer @ 某大厂"
+    },
+    "right": {
+      "label": "NIGHT · 22:00 — ?",
+      "title": "造",
+      "accent": "被动\n收入",
+      "items": ["zshare · motion", "flutter_floatwing", "wuma.dev (next)"],
+      "footnote": "// Indie Hacker · shipping"
+    }
+  },
+  "build": "flutter_floatwing",
+  "next": "wuma.dev"
+}

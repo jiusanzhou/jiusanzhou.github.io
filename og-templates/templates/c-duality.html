@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px; height: 630px;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  .card {
+    position: relative;
+    width: 1200px; height: 630px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* LEFT: light side (day job) */
+  .left {
+    background:
+      radial-gradient(circle at 30% 70%, rgba(6,182,212,0.10), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+    padding: 80px 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #0f172a;
+    position: relative;
+  }
+  .left::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* RIGHT: dark side (night build) */
+  .right {
+    background:
+      radial-gradient(circle at 70% 30%, rgba(236,72,153,0.18), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(99,102,241,0.15), transparent 50%),
+      #0a0a0f;
+    padding: 80px 80px 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f8fafc;
+    position: relative;
+  }
+  .right::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  .side-tag {
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 10px;
+    position: relative; z-index: 2;
+  }
+  .left .side-tag { color: #06b6d4; }
+  .right .side-tag { color: #ec4899; }
+  .side-tag .icon {
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: currentColor;
+  }
+
+  .side-title {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin-top: 28px;
+    position: relative; z-index: 2;
+  }
+  .left .side-title .em {
+    background: linear-gradient(135deg, #06b6d4, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .right .side-title .em {
+    background: linear-gradient(135deg, #ec4899, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .side-list {
+    margin-top: 32px;
+    display: flex; flex-direction: column; gap: 14px;
+    font-size: 18px;
+    position: relative; z-index: 2;
+  }
+  .side-list .item {
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'SF Mono', ui-monospace, monospace;
+  }
+  .left .side-list .item { color: #475569; }
+  .right .side-list .item { color: #cbd5e1; }
+  .left .side-list .item::before {
+    content: '→'; color: #06b6d4; font-weight: 700;
+  }
+  .right .side-list .item::before {
+    content: '→'; color: #ec4899; font-weight: 700;
+  }
+
+  .side-foot {
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-size: 13px;
+    position: relative; z-index: 2;
+  }
+  .left .side-foot { color: #94a3b8; }
+  .right .side-foot { color: #64748b; }
+
+  /* CENTER: divider with avatar */
+  .center {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .avatar {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #ec4899 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 56px; font-weight: 800;
+    letter-spacing: -2px;
+    box-shadow:
+      0 0 0 8px rgba(255,255,255,0.95),
+      0 0 0 9px rgba(15,23,42,0.1),
+      0 24px 48px rgba(15,23,42,0.25);
+  }
+  .name {
+    margin-top: 18px;
+    padding: 8px 22px;
+    background: white;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.18);
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3px;
+  }
+  .name .url {
+    color: #94a3b8;
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .divider {
+    position: absolute;
+    left: 50%; top: 0;
+    width: 1px; height: 100%;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(15,23,42,0.15) 20%,
+      rgba(15,23,42,0.15) 35%,
+      transparent 45%,
+      transparent 55%,
+      rgba(255,255,255,0.15) 65%,
+      rgba(255,255,255,0.15) 80%,
+      transparent 100%);
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <div class="side-tag"><span class="icon"></span> DAY · 09:00 — 21:00</div>
+    <div>
+      <div class="side-title">调 <span class="em">GPU<br>集群</span></div>
+      <div class="side-list">
+        <div class="item">LLM Serving</div>
+        <div class="item">vLLM / SGLang</div>
+        <div class="item">RDMA / PD 分离</div>
+      </div>
+    </div>
+    <div class="side-foot">// AI Infra Engineer @ 某大厂</div>
+  </div>
+
+  <div class="right">
+    <div class="side-tag"><span class="icon"></span> NIGHT · 22:00 — ?</div>
+    <div>
+      <div class="side-title">造 <span class="em">被动<br>收入</span></div>
+      <div class="side-list">
+        <div class="item">zshare · motion</div>
+        <div class="item">flutter_floatwing</div>
+        <div class="item">wuma.dev (next)</div>
+      </div>
+    </div>
+    <div class="side-foot">// Indie Hacker · shipping</div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="center">
+    <div class="avatar">Z</div>
+    <div class="name">Zoe<span class="url">zoe.im</span></div>
+  </div>
+</div>
+</body>
+</html>
