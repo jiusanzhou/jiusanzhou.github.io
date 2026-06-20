@@ -125,7 +125,7 @@ products:
     name: AEO
     tagline: 让 AI 主动推荐你的企业 — 帮你被 DeepSeek / 豆包 / 通义 / Kimi 点名
     url: https://aeo.wencai.app
-    image: https://aeo.wencai.app/og.png
+    image: https://aeo.wencai.app/og.svg
     status: live
     category: SaaS
     launchedAt: '2026'
