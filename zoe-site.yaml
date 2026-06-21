@@ -214,6 +214,15 @@ products:
     launchedAt: '2026-06'
     tags: [Android, Reverse, Privacy]
 
+  - slug: ontheway
+    name: OnTheWay
+    tagline: Onboarding Made Simple — 录制点击流程生成交互式产品引导，一行代码集成，AI 驱动
+    url: https://ontheway.wencai.app
+    status: live
+    category: SaaS
+    launchedAt: '2026-06'
+    tags: [Onboarding, DevTool, AI]
+
 # RSS
 rss:
   enabled: true
