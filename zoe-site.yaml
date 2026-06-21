@@ -63,6 +63,9 @@ links:
   - title: 博客
     category: 导航
     href: /blog
+  - title: 产品
+    category: 导航
+    href: /products
   - title: 项目
     category: 导航
     href: /projects
@@ -72,9 +75,9 @@ links:
   - title: GitHub
     category: 开源
     href: https://github.com/jiusanzhou
-  - title: distro
+  - title: 项目列表
     category: 开源
-    href: https://github.com/jiusanzhou/distro
+    href: /projects
   - title: RSS
     category: 订阅
     href: /rss.xml
