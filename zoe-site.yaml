@@ -187,6 +187,15 @@ products:
     launchedAt: '2026-06'
     tags: [AI, Agent, Platform]
 
+  - slug: openagent
+    name: OpenAgent
+    tagline: Universal Manifest for AI Agents — agent.yaml 定义身份 / 人格 / 技能 / 经验 / 定价，框架无关
+    url: https://openagent.wencai.app
+    status: live
+    category: OSS
+    launchedAt: '2026-06'
+    tags: [AI, Agent, Spec]
+
 # RSS
 rss:
   enabled: true
