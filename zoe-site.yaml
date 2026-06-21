@@ -266,6 +266,7 @@ sections:
 
   - title: 在做什么
     description: 当前聚焦的方向
+    position: center
     items:
       - icon: '🚀'
         title: AI Infra & LLM Serving
