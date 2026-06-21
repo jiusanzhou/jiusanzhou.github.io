@@ -205,6 +205,15 @@ products:
     launchedAt: '2026-06'
     tags: [SaaS, 快递, 结算]
 
+  - slug: apkman
+    name: APKMan
+    tagline: Android APK 反编译分析工具 — DEX → Java、manifest / resources / 签名，纯浏览器零上传
+    url: https://apkman.wencai.app
+    status: live
+    category: Tool
+    launchedAt: '2026-06'
+    tags: [Android, Reverse, Privacy]
+
 # RSS
 rss:
   enabled: true
