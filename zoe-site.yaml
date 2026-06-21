@@ -196,6 +196,15 @@ products:
     launchedAt: '2026-06'
     tags: [AI, Agent, Spec]
 
+  - slug: postman
+    name: Postman
+    tagline: 快递驿站员工管理与结算平台 — 自动同步配送数据，智能计算工资
+    url: https://postman.wencai.app
+    status: live
+    category: SaaS
+    launchedAt: '2026-06'
+    tags: [SaaS, 快递, 结算]
+
 # RSS
 rss:
   enabled: true
