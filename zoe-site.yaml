@@ -178,6 +178,15 @@ products:
     launchedAt: '2026-06'
     tags: [REITs, Finance, SaaS]
 
+  - slug: abox
+    name: ABox
+    tagline: AI Agents, One Click Away — 沙箱化部署 Agent，Web / Telegram / Discord / Slack 一键接入
+    url: https://abox.wencai.app
+    status: live
+    category: SaaS
+    launchedAt: '2026-06'
+    tags: [AI, Agent, Platform]
+
 # RSS
 rss:
   enabled: true
