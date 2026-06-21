@@ -169,6 +169,15 @@ products:
     launchedAt: '2026'
     tags: [AI, No-Code]
 
+  - slug: reits-radar
+    name: REITs Radar
+    tagline: 中国公募 REITs 专业分析平台 — 估值 / 分派 / 风险一站式穿透
+    url: https://reits-radar.wencai.app
+    status: live
+    category: SaaS
+    launchedAt: '2026-06'
+    tags: [REITs, Finance, SaaS]
+
 # RSS
 rss:
   enabled: true
