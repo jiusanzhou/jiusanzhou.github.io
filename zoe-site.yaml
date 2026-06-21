@@ -278,6 +278,23 @@ sections:
         title: 被动收入实验
         description: 从零开始搭建被动收入系统，每月公开数据报告。
 
+  # 显式声明顺序：内容资产前置（最新文章 → 独立产品 → 开源项目）
+  - type: posts
+    title: 最新文章
+    description: 写代码、造工具、记录过程
+    limit: 6
+    mode: grid
+
+  - type: products
+    title: 独立产品
+    description: 我做的独立产品 — 上线 / 在做 / 想做
+    limit: 6
+
+  - type: projects
+    title: 开源项目
+    description: 我的开源项目和作品集
+    limit: 6
+
 # 中文标签
 labels:
   blog: 博客
