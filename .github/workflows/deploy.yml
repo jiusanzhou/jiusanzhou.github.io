@@ -62,15 +62,17 @@ jobs:
         run: |
           git clone --depth 1 https://x-access-token:${{ secrets.ME_REPO_TOKEN }}@github.com/jiusanzhou/me.git /tmp/repo-me
           # Copy blog posts from me repo (📖posts/) into site content
+          # Note: filenames may contain CJK chars / fullwidth punctuation / spaces, so use -print0
           mkdir -p site/content/posts
-          find /tmp/repo-me/📖posts -name '*.md' -o -name '*.mdx' | while read f; do
-            cp "$f" site/content/posts/
-          done
-          # Also copy from subdirectories
-          find /tmp/repo-me/📖posts -mindepth 2 -name '*.md' -o -name '*.mdx' | while read f; do
-            cp "$f" site/content/posts/
-          done
-          echo "Synced $(ls site/content/posts/ | wc -l) posts from me repo"
+          before=$(ls site/content/posts/ | wc -l)
+          # Recursively copy every .md/.mdx under 📖posts (flattened into a single dir)
+          find /tmp/repo-me/📖posts -type f \( -name '*.md' -o -name '*.mdx' \) -print0 \
+            | while IFS= read -r -d '' f; do
+                cp -f "$f" site/content/posts/
+              done
+          after=$(ls site/content/posts/ | wc -l)
+          synced_from_me=$(find /tmp/repo-me/📖posts -type f \( -name '*.md' -o -name '*.mdx' \) | wc -l)
+          echo "Synced $synced_from_me posts from me repo (site dir: $before -> $after total)"
 
           # Copy static assets from me repo (banners, images, etc.)
           if [ -d /tmp/repo-me/static ]; then
