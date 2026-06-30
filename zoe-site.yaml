@@ -64,7 +64,7 @@ i18n:
           href: /projects
         - title: About
           href: /about
-        - title: ☕ Buy me a coffee
+        - title: ☕ Sponsor me
           href: https://payone.wencai.app/s/zoe
 
       links:
@@ -84,10 +84,10 @@ i18n:
           category: Navigation
           href: /about
         - title: GitHub
-          category: Open source
+          category: Open Source
           href: https://github.com/jiusanzhou
         - title: All projects
-          category: Open source
+          category: Open Source
           href: /projects
         - title: RSS
           category: Subscribe
