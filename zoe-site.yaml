@@ -101,11 +101,13 @@ i18n:
         greeting: '👋 Hey, I''m Zoe'
         typingTexts:
           - serving LLMs at scale
-          - building AI ops tools
+          - shipping AI ops tools
           - tuning GPU clusters
-          - compounding side income
-        description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · Indie hacker building tools the AI era needs'
+          - helping teams ship AI
+        description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · I help teams take AI from demo to production — and ship my own tools along the way.'
         cta:
+          - text: Let's work together
+            href: '#services'
           - text: Read the blog
             href: /blog
           - text: GitHub
@@ -133,6 +135,34 @@ i18n:
             - icon: '💰'
               title: Indie revenue experiments
               description: Bootstrapping passive income from zero — products, content, automation. Public monthly numbers, no fluff.
+
+        - type: features
+          id: services
+          title: How I can help
+          description: Hands-on AI infra & product engineering — from your first inference cluster to your first paying users.
+          columns: 3
+          style: cards
+          items:
+            - icon: '🧠'
+              title: LLM Serving & Inference
+              description: Stand up a production-grade inference platform on your own GPUs. vLLM / SGLang, P/D disaggregation, RDMA, autoscaling. Cut latency, cut cost.
+            - icon: '🤖'
+              title: AI Agents & Workflows
+              description: Multi-agent systems, RAG pipelines, internal copilots. From ChatGPT-style assistants to autonomous agents that actually do the work.
+            - icon: '🚀'
+              title: Product Engineering
+              description: AI-first SaaS, landing pages, dev tools. Idea to live product in weeks — Next.js / Cloudflare / Supabase stack I use every day.
+
+        - type: cta
+          style: gradient
+          title: Have an AI project that's stuck?
+          description: Whether you need an architecture review, a hands-on engineer for 4 weeks, or a partner to ship a v1 — let's talk.
+          cta:
+            - text: Email me
+              href: mailto:hi@zoe.im
+            - text: Telegram
+              href: https://t.me/noboddyim
+              variant: outline
 
         - type: posts
           title: Latest posts
@@ -533,9 +563,11 @@ hero:
     - 搞 LLM 推理
     - 造 AI Ops 工具
     - 调 GPU 集群
-    - 搭被动收入系统
-  description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · 用代码和 AI 搭建可持续的收入系统'
+    - 帮团队把 AI 落地
+  description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · 帮团队把 AI 从 Demo 推到生产，也顺手造自己想用的工具。'
   cta:
+    - text: 聊聊合作
+      href: '#services'
     - text: 读博客
       href: /blog
     - text: GitHub
@@ -564,6 +596,34 @@ sections:
       - icon: '💰'
         title: 被动收入实验
         description: 从零开始搭建被动收入系统，每月公开数据报告。
+
+  - type: features
+    id: services
+    title: 我能帮你做什么
+    description: 一线 AI 基础设施 + 产品工程能力 —— 从你的第一个推理集群，到你的第一批付费用户。
+    columns: 3
+    style: cards
+    items:
+      - icon: '🧠'
+        title: LLM 推理服务
+        description: 在你自己的 GPU 上搭起生产级推理平台。vLLM / SGLang、PD 分离、RDMA、弹性伸缩。降延迟，降成本。
+      - icon: '🤖'
+        title: AI Agent & 工作流
+        description: 多 Agent 系统、RAG 管线、企业内部 Copilot。从 ChatGPT 式助手到真能干活的自主 Agent。
+      - icon: '🚀'
+        title: 产品工程
+        description: AI-first SaaS、Landing Page、开发者工具。想法到上线只要几周 —— Next.js / Cloudflare / Supabase 是我每天在用的栈。
+
+  - type: cta
+    style: gradient
+    title: AI 项目卡住了？
+    description: 不管你需要的是架构评审、一位能落地 4 周的工程师，还是一起把 v1 推上线的伙伴 —— 都可以聊聊。
+    cta:
+      - text: 发邮件
+        href: mailto:hi@zoe.im
+      - text: Telegram
+        href: https://t.me/noboddyim
+        variant: outline
 
   # 显式声明顺序：内容资产前置（最新文章 → 独立产品 → 开源项目）
   - type: posts
