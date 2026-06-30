@@ -100,11 +100,11 @@ i18n:
       hero:
         greeting: '👋 Hey, I''m Zoe'
         typingTexts:
-          - shipping LLM inference
+          - serving LLMs at scale
           - building AI ops tools
           - tuning GPU clusters
-          - compounding passive income
-        description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · Building sustainable income with code and AI'
+          - compounding side income
+        description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · Indie hacker building tools the AI era needs'
         cta:
           - text: Read the blog
             href: /blog
@@ -113,26 +113,26 @@ i18n:
 
       sections:
         - type: quote
-          quote: All business logic should evolve toward a "no-code platform."
-          cite: Zoe · long-held belief
+          quote: Every piece of business logic should eventually evolve into a "no-code platform."
+          cite: Zoe · a long-held belief
           link:
             text: wuma.dev
             href: https://wuma.dev
           align: center
 
         - title: What I'm working on
-          description: Where I'm focused right now
+          description: Where my hours go right now
           position: center
           items:
             - icon: '🚀'
               title: AI Infra & LLM Serving
-              description: Running an in-house inference platform at a major internet company. vLLM / SGLang / GPU cluster scheduling / RDMA / PD-disaggregation. Living and breathing large-model inference.
+              description: Running an in-house inference platform at a top-tier internet company. vLLM / SGLang, GPU cluster scheduling, RDMA, P/D disaggregation. Days deep in the guts of large-model serving.
             - icon: '🛠'
               title: AI Ops tools
-              description: Multi-agent systems, content distribution CLIs, mobile AI agents. I scratch my own itches, then open-source the result.
+              description: Multi-agent systems, content distribution CLIs, mobile AI agents. I scratch my own itches first, then open-source whatever's left.
             - icon: '💰'
-              title: Passive income experiments
-              description: Building passive income systems from zero, with monthly public reports.
+              title: Indie revenue experiments
+              description: Bootstrapping passive income from zero — products, content, automation. Public monthly numbers, no fluff.
 
         - type: posts
           title: Latest posts
@@ -149,6 +149,123 @@ i18n:
           title: Open-source projects
           description: My open-source work and portfolio
           limit: 6
+
+      # Product taglines, English-first.
+      # Order must match top-level `products:` (deepMerge replaces arrays whole).
+      products:
+        - slug: motion
+          name: Motion
+          tagline: The AI-native Markdown editor — own your notes. They live in your GitHub, not our database.
+          url: https://motion.wencai.app
+          image: https://motion.wencai.app/opengraph-image
+          repo: https://github.com/jiusanzhou/motion
+          status: live
+          category: OSS
+          launchedAt: '2026-03'
+          tags: [Next.js, Markdown, GitHub]
+          featured: true
+
+        - slug: aeo
+          name: AEO
+          tagline: Get cited by AI search. The SEO playbook for ChatGPT, Perplexity, Claude and friends.
+          url: https://aeo.wencai.app
+          image: https://aeo.wencai.app/og.svg
+          status: live
+          category: SaaS
+          launchedAt: '2026'
+          tags: [AI, SEO, Brand]
+          featured: true
+
+        - slug: tools
+          name: AI Tools Directory
+          tagline: A hand-picked map of the AI toolbox — for creators, devs, learners, and the chronically curious.
+          url: https://tools.wencai.app
+          image: https://tools.wencai.app/opengraph-image
+          status: live
+          category: Site
+          launchedAt: '2026-04'
+          tags: [Next.js, Neon, Directory]
+
+        - slug: payone
+          name: PayOne
+          tagline: One QR for every wallet. Stop printing four codes — print one.
+          url: https://payone.wencai.app
+          status: live
+          category: Tool
+          launchedAt: '2024'
+          tags: [Tool, QR]
+
+        - slug: 1hour-guide
+          name: 1 Hour Guide
+          tagline: Learn anything in 1 hour — hands-on tutorials, no fluff.
+          url: https://1hour.guide
+          status: live
+          category: Site
+          launchedAt: '2026'
+          tags: [Learning, Guide]
+
+        - slug: wuma
+          name: wuma.dev
+          tagline: AI landing-page generator for indie hackers. From idea to live URL in minutes (building).
+          url: https://wuma.dev
+          status: building
+          category: SaaS
+          launchedAt: '2026'
+          tags: [AI, No-Code]
+
+        - slug: reits-radar
+          name: REITs Radar
+          tagline: Deep analytics for China's public REITs — valuation, payouts, and risk at a glance.
+          url: https://reits-radar.wencai.app
+          status: live
+          category: SaaS
+          launchedAt: '2026-06'
+          tags: [REITs, Finance, SaaS]
+
+        - slug: abox
+          name: ABox
+          tagline: AI agents, one click away. Drop an agent into Web, Telegram, Discord, or Slack — sandboxed by default.
+          url: https://abox.wencai.app
+          status: live
+          category: SaaS
+          launchedAt: '2026-06'
+          tags: [AI, Agent, Platform]
+
+        - slug: openagent
+          name: OpenAgent
+          tagline: A universal manifest for AI agents. One agent.yaml defines identity, persona, skills, pricing — framework-agnostic.
+          url: https://openagent.wencai.app
+          status: live
+          category: OSS
+          launchedAt: '2026-06'
+          tags: [AI, Agent, Spec]
+
+        - slug: postman
+          name: Postman
+          tagline: Workforce & payroll for last-mile delivery stations. Auto-sync deliveries, auto-compute paychecks.
+          url: https://postman.wencai.app
+          status: live
+          category: SaaS
+          launchedAt: '2026-06'
+          tags: [SaaS, Delivery, Payroll]
+
+        - slug: apkman
+          name: APKMan
+          tagline: Reverse-engineer Android APKs in your browser. DEX → Java, manifest, resources, signatures. Zero upload.
+          url: https://apkman.wencai.app
+          status: live
+          category: Tool
+          launchedAt: '2026-06'
+          tags: [Android, Reverse, Privacy]
+
+        - slug: ontheway
+          name: OnTheWay
+          tagline: Onboarding made simple. Record a flow, ship an interactive product tour — one line of code, AI-powered.
+          url: https://ontheway.wencai.app
+          status: live
+          category: SaaS
+          launchedAt: '2026-06'
+          tags: [Onboarding, DevTool, AI]
 
       labels:
         blog: Blog
