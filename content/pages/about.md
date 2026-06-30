@@ -1,6 +1,7 @@
 ---
 title: 关于我
 slug: about
+lang: zh-CN
 ---
 
 # 关于我

@@ -34,6 +34,176 @@ copyright:
 # 主题风格
 theme: default
 
+# === i18n（zh-CN 默认，/en/ 镜像 EN 版） ===
+i18n:
+  enabled: true
+  locales:
+    - zh-CN
+    - en
+  defaultLocale: zh-CN
+  routing: prefix-except-default
+  localeNames:
+    zh-CN: 中文
+    en: English
+  overrides:
+    en:
+      title: Zoe
+      description: AI Infra Engineer · LLM Serving / GPU clusters / inference optimization · Indie hacker building AI ops tools and passive income systems
+
+      author:
+        minibio: AI Infra Engineer · LLM Serving · GPU/RDMA · indie hacker, obsessed with shipping tools
+
+      navs:
+        - title: Home
+          href: /
+        - title: Blog
+          href: /blog
+        - title: Products
+          href: /products
+        - title: Projects
+          href: /projects
+        - title: About
+          href: /about
+        - title: ☕ Buy me a coffee
+          href: https://payone.wencai.app/s/zoe
+
+      links:
+        - title: Home
+          category: Navigation
+          href: /
+        - title: Blog
+          category: Navigation
+          href: /blog
+        - title: Products
+          category: Navigation
+          href: /products
+        - title: Projects
+          category: Navigation
+          href: /projects
+        - title: About
+          category: Navigation
+          href: /about
+        - title: GitHub
+          category: Open source
+          href: https://github.com/jiusanzhou
+        - title: All projects
+          category: Open source
+          href: /projects
+        - title: RSS
+          category: Subscribe
+          href: /rss.xml
+
+      blog:
+        title: Blog
+        description: Code, tools, and notes from the trenches
+
+      hero:
+        greeting: '👋 Hey, I''m Zoe'
+        typingTexts:
+          - shipping LLM inference
+          - building AI ops tools
+          - tuning GPU clusters
+          - compounding passive income
+        description: 'AI Infra Engineer · LLM Serving / GPU / RDMA · Building sustainable income with code and AI'
+        cta:
+          - text: Read the blog
+            href: /blog
+          - text: GitHub
+            href: https://github.com/jiusanzhou
+
+      sections:
+        - type: quote
+          quote: All business logic should evolve toward a "no-code platform."
+          cite: Zoe · long-held belief
+          link:
+            text: wuma.dev
+            href: https://wuma.dev
+          align: center
+
+        - title: What I'm working on
+          description: Where I'm focused right now
+          position: center
+          items:
+            - icon: '🚀'
+              title: AI Infra & LLM Serving
+              description: Running an in-house inference platform at a major internet company. vLLM / SGLang / GPU cluster scheduling / RDMA / PD-disaggregation. Living and breathing large-model inference.
+            - icon: '🛠'
+              title: AI Ops tools
+              description: Multi-agent systems, content distribution CLIs, mobile AI agents. I scratch my own itches, then open-source the result.
+            - icon: '💰'
+              title: Passive income experiments
+              description: Building passive income systems from zero, with monthly public reports.
+
+        - type: posts
+          title: Latest posts
+          description: Code, tools, and notes from the trenches
+          limit: 6
+          mode: grid
+
+        - type: products
+          title: Independent products
+          description: Things I've shipped — live, building, dreaming
+          limit: 6
+
+        - type: projects
+          title: Open-source projects
+          description: My open-source work and portfolio
+          limit: 6
+
+      labels:
+        blog: Blog
+        blog.archives: Archives
+        blog.tags: Tags
+        blog.drafts: Drafts
+        blog.drafts.description: These posts are unpublished and only visible in dev mode
+        blog.drafts.empty: No drafts
+        blog.drafts.badge: Draft
+        blog.back: Back to blog
+        blog.readMore: Read more
+        blog.viewMore: View more
+        blog.noTags: No tags yet
+        blog.noPosts: No posts yet
+        blog.browseTags: Browse posts by tag
+        blog.minRead: min read
+        blog.comments: Comments
+        blog.postNotFound: Post not found
+        blog.translations: 'Also available in:'
+        projects: Projects
+        projects.description: My open-source projects and portfolio
+        products: Products
+        products.description: Things I've shipped — live, building, dreaming
+        products.viewMore: View more
+        products.noProducts: No products yet
+        products.count: '{count} products'
+        help: Help center
+        loading: Loading...
+        notFound.title: Page not found
+        notFound.description: Sorry, the page you're looking for doesn't exist or has been moved.
+        notFound.hint: The link may have expired, or the URL might be wrong.
+        notFound.home: Back to home
+        notFound.blog: Browse the blog
+        notFound.issueHint: If you think this is a bug, please
+        notFound.issueLink: open an issue
+        notFound.issueEnd: to let me know.
+        contact: Get in touch
+        contact.description: Any of these works 👇
+        home.projects: Open-source projects
+        home.projects.description: Building things is the best way to learn
+        home.products: Independent products
+        home.products.description: Live, building, dreaming
+        home.latestPosts: Latest posts
+        home.latestPosts.description: Code, tools, and notes from the trenches
+        error.title: Something went wrong
+        error.description: An unexpected error occurred. Please try again.
+        error.retry: Retry
+        error.home: Back to home
+        releases: Releases
+        releases.description: Grab the latest version
+        changelog: Changelog
+        changelog.description: Version history
+        pricing: Pricing
+        pricing.description: Pick the plan that fits
+
 # 导航菜单
 navs:
   - title: 首页
