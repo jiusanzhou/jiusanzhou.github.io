@@ -88,6 +88,19 @@ I write in Chinese first; [distro](https://github.com/jiusanzhou/distro) fans th
 
 Built with my own [nextjs-starter-zoe-app](https://github.com/jiusanzhou/nextjs-starter-zoe-app). Next.js + Tailwind + shadcn/ui, YAML-driven config, Markdown content.
 
+## Working with me
+
+Outside my day job, I keep room for one or two external projects a year.
+
+Usually one of these:
+
+- **AI inference / LLM Serving** — Help your team stand up or optimize an inference platform from scratch. GPUs, scheduling, RDMA, cost.
+- **AI product 0→1** — Partner with founders to take an idea to a working v1. I move fast on the Next.js / Cloudflare / Supabase stack I use every day.
+
+Not for: UI implementation gigs, pure front-end work, or staff-aug at large orgs.
+
+If something resonates, [hi@zoe.im](mailto:hi@zoe.im) or [Telegram](https://t.me/noboddyim) — one line about "what you're building and what's stuck" is enough.
+
 ## Contact
 
 - GitHub: [jiusanzhou](https://github.com/jiusanzhou)

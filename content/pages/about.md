@@ -85,6 +85,19 @@ lang: zh-CN
 
 用我自己的 [nextjs-starter-zoe-app](https://github.com/jiusanzhou/nextjs-starter-zoe-app) 搭的。Next.js + Tailwind + shadcn/ui，YAML 驱动配置，Markdown 写内容。
 
+## 关于合作
+
+主业之外，每年留一两个外部项目的时间。
+
+通常是这两种：
+
+- **AI 推理 / LLM Serving 架构** — 帮团队从 0 搭起或优化推理平台。GPU、调度、RDMA、成本。
+- **AI 产品 0→1** — 跟创始人一起把想法做成能跑的 v1。我比较擅长用 Next.js / Cloudflare / Supabase 这条快路径。
+
+不接：UI 切图、纯前端外包、大公司纯人力派遣。
+
+想聊的话，[hi@zoe.im](mailto:hi@zoe.im) 或 [Telegram](https://t.me/noboddyim) 都行 —— 邮件附上一句"在做什么、卡在哪"就够了。
+
 ## 联系方式
 
 - GitHub: [jiusanzhou](https://github.com/jiusanzhou)
