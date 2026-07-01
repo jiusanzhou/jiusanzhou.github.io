@@ -2,6 +2,7 @@
 
 title: Zoe
 description: AI Infra Engineer · LLM Serving / GPU 集群 / 推理优化 · 造 AI Ops 工具搭被动收入
+slogan: AI Infra · 造工具的偏执狂
 url: https://zoe.im
 logo: /images/avatar-v3.jpg
 image: /images/og.png  # 1200x630 social/share image; see og-templates/
@@ -49,6 +50,7 @@ i18n:
     en:
       title: Zoe
       description: AI Infra Engineer · LLM Serving / GPU clusters / inference optimization · Indie hacker building AI ops tools and passive income systems
+      slogan: AI Infra Engineer · shipping AI ops tools
 
       author:
         minibio: AI Infra Engineer · LLM Serving · GPU/RDMA · indie hacker, obsessed with shipping tools
