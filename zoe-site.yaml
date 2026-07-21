@@ -674,6 +674,49 @@ labels:
 analytics:
   googleId: G-5LM10G1ZPK
 
+# ============================================================
+# SEO cleanup / URL migration
+# ------------------------------------------------------------
+# 静态站（GH Pages）没有真正的 301/410，主题的 postbuild 脚本会
+# 为每条规则生成一个 static HTML page：
+#   - redirects: <meta http-equiv="refresh"> + <link rel="canonical">
+#     Google 把 time=0 的 meta refresh 视为 301
+#   - gone: `<meta name="robots" content="noindex, nofollow">` + 明确的
+#     "此页已永久移除" 文案，几周内 Google 会把它从索引中剔除
+#
+# 数据来源：外部 SEO 审计（/Users/zoe/tmp/zoe-im-sitemap-fix/），
+# 参见博客 "zoe.im SEO 大扫除" 记录。
+# ============================================================
+seo:
+  redirects:
+    # 老站 /blogs/ 复数路径 → 新站 /blog/
+    - from: /blogs
+      to: /blog/
+    - from: /blogs/archives
+      to: /blog/archives/
+    - from: /blogs/tags
+      to: /blog/tags/
+    - from: /blogs/drafts
+      to: /blog/drafts/
+    # 主要 tag 页 —— 兜底列举几个 GSC 报过的
+    - from: /blogs/tag/kubernetes
+      to: /blog/tag/kubernetes/
+    # 大小写敏感的老 slug（Hexo 时代大写，现在小写）
+    - from: /blog/flutter手机ai-agent
+      to: /blog/Flutter手机AI-Agent/
+
+  gone:
+    # 老 Hexo 时代的孤立英文文章（8 条中的几个代表）
+    - /blog/harry-potter-and-the-half-blood-prince
+    # 老 nextjs-starter-zoe-app 文档路径
+    - /nextjs-starter-zoe-app
+    - /nextjs-starter-zoe-app/docs
+    # 孤立异常 URL
+    - /month
+    - /月
+    - /docs
+    - /index.xml
+
 # 从 me 仓库同步博客内容
 gitContent:
   - name: me
